@@ -1,6 +1,6 @@
 //
-//  USKitUITests.swift
-//  USKitUITests
+//  USKitMacUITests.swift
+//  USKitMacUITests
 //
 //  Created by Nate Kirby on 1/18/16.
 //  Copyright © 2016 Nate Kirby. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class USKitUITests: XCTestCase {
+class USKitMacUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

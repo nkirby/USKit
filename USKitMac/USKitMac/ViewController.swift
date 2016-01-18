@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  USKit
+//  USKitMac
 //
 //  Created by Nate Kirby on 1/18/16.
 //  Copyright © 2016 Nate Kirby. All rights reserved.
