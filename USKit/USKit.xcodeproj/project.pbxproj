@@ -24,6 +24,8 @@
 		43EC1FDC1C4D6F8500C3BDD6 /* NSValue+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FDB1C4D6F8500C3BDD6 /* NSValue+UIKit.swift */; };
 		43EC1FDE1C4D9D5000C3BDD6 /* NSIndexPath+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FDD1C4D9D5000C3BDD6 /* NSIndexPath+UIKit.swift */; };
 		43EC1FE01C4D9EEA00C3BDD6 /* UIRectEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FDF1C4D9EEA00C3BDD6 /* UIRectEdge.swift */; };
+		43EC1FE21C4DA31E00C3BDD6 /* NSDictionary+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FE11C4DA31E00C3BDD6 /* NSDictionary+UIKit.swift */; };
+		43EC1FE41C4DA3EF00C3BDD6 /* UIFloatRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FE31C4DA3EF00C3BDD6 /* UIFloatRange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		43EC1FDB1C4D6F8500C3BDD6 /* NSValue+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSValue+UIKit.swift"; path = "lib/Extensions/NSValue+UIKit.swift"; sourceTree = "<group>"; };
 		43EC1FDD1C4D9D5000C3BDD6 /* NSIndexPath+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSIndexPath+UIKit.swift"; path = "lib/Extensions/NSIndexPath+UIKit.swift"; sourceTree = "<group>"; };
 		43EC1FDF1C4D9EEA00C3BDD6 /* UIRectEdge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIRectEdge.swift; path = lib/Geometry/UIRectEdge.swift; sourceTree = "<group>"; };
+		43EC1FE11C4DA31E00C3BDD6 /* NSDictionary+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDictionary+UIKit.swift"; path = "lib/Extensions/NSDictionary+UIKit.swift"; sourceTree = "<group>"; };
+		43EC1FE31C4DA3EF00C3BDD6 /* UIFloatRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIFloatRange.swift; path = lib/Geometry/UIFloatRange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 				43EC1FD31C4D6C3500C3BDD6 /* UIEdgeInsets.swift */,
 				43EC1FD61C4D6DB300C3BDD6 /* UIOffset.swift */,
 				43EC1FDF1C4D9EEA00C3BDD6 /* UIRectEdge.swift */,
+				43EC1FE31C4DA3EF00C3BDD6 /* UIFloatRange.swift */,
 			);
 			name = Geometry;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				43EC1FD81C4D6EE500C3BDD6 /* NSString+StringConversions.swift */,
 				43EC1FDB1C4D6F8500C3BDD6 /* NSValue+UIKit.swift */,
 				43EC1FDD1C4D9D5000C3BDD6 /* NSIndexPath+UIKit.swift */,
+				43EC1FE11C4DA31E00C3BDD6 /* NSDictionary+UIKit.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -292,10 +298,12 @@
 				43EC1FC01C4D539500C3BDD6 /* USImageManipulation.swift in Sources */,
 				43EC1FC61C4D55F500C3BDD6 /* UIDeviceOrientation.swift in Sources */,
 				43EC1FD71C4D6DB300C3BDD6 /* UIOffset.swift in Sources */,
+				43EC1FE41C4DA3EF00C3BDD6 /* UIFloatRange.swift in Sources */,
 				43EC1FC91C4D56C300C3BDD6 /* UIInterfaceIdiom.swift in Sources */,
 				43EC1FD41C4D6C3500C3BDD6 /* UIEdgeInsets.swift in Sources */,
 				43EC1FD91C4D6EE500C3BDD6 /* NSString+StringConversions.swift in Sources */,
 				43EC1FBE1C4D537300C3BDD6 /* USKitCore.swift in Sources */,
+				43EC1FE21C4DA31E00C3BDD6 /* NSDictionary+UIKit.swift in Sources */,
 				43EC1FCF1C4D5DAC00C3BDD6 /* UIDeviceBatteryState.swift in Sources */,
 				43EC1FDE1C4D9D5000C3BDD6 /* NSIndexPath+UIKit.swift in Sources */,
 				43EC1FD11C4D623700C3BDD6 /* UIFont.swift in Sources */,

@@ -17,5 +17,5 @@ public extension NSIndexPath {
         get { return self.indexAtPosition(1) }
     }
 }
-    
+        
 #endif
