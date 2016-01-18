@@ -1,15 +1,15 @@
 //
-//  USKitTests.swift
-//  USKitTests
+//  USKitMacTests.swift
+//  USKitMacTests
 //
 //  Created by Nate Kirby on 1/18/16.
 //  Copyright © 2016 Nate Kirby. All rights reserved.
 //
 
 import XCTest
-@testable import USKit
+@testable import USKitMac
 
-class USKitTests: XCTestCase {
+class USKitMacTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
