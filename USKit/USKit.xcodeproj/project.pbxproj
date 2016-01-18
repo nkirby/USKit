@@ -17,6 +17,9 @@
 		43EC1FCB1C4D5A2F00C3BDD6 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FCA1C4D5A2F00C3BDD6 /* UIDevice.swift */; };
 		43EC1FCD1C4D5CED00C3BDD6 /* UIDeviceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FCC1C4D5CED00C3BDD6 /* UIDeviceConstants.swift */; };
 		43EC1FCF1C4D5DAC00C3BDD6 /* UIDeviceBatteryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FCE1C4D5DAC00C3BDD6 /* UIDeviceBatteryState.swift */; };
+		43EC1FD11C4D623700C3BDD6 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FD01C4D623700C3BDD6 /* UIFont.swift */; };
+		43EC1FD41C4D6C3500C3BDD6 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FD31C4D6C3500C3BDD6 /* UIEdgeInsets.swift */; };
+		43EC1FD71C4D6DB300C3BDD6 /* UIOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FD61C4D6DB300C3BDD6 /* UIOffset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		43EC1FCA1C4D5A2F00C3BDD6 /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIDevice.swift; path = lib/Device/UIDevice.swift; sourceTree = "<group>"; };
 		43EC1FCC1C4D5CED00C3BDD6 /* UIDeviceConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIDeviceConstants.swift; path = lib/Device/UIDeviceConstants.swift; sourceTree = "<group>"; };
 		43EC1FCE1C4D5DAC00C3BDD6 /* UIDeviceBatteryState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIDeviceBatteryState.swift; path = lib/Device/UIDeviceBatteryState.swift; sourceTree = "<group>"; };
+		43EC1FD01C4D623700C3BDD6 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIFont.swift; path = lib/Font/UIFont.swift; sourceTree = "<group>"; };
+		43EC1FD31C4D6C3500C3BDD6 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIEdgeInsets.swift; path = lib/Geometry/UIEdgeInsets.swift; sourceTree = "<group>"; };
+		43EC1FD61C4D6DB300C3BDD6 /* UIOffset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIOffset.swift; path = lib/Geometry/UIOffset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,8 @@
 			children = (
 				43EC1FBD1C4D537300C3BDD6 /* USKitCore.swift */,
 				43EC1FC71C4D55FD00C3BDD6 /* Device */,
+				43EC1FD21C4D623B00C3BDD6 /* Font */,
+				43EC1FD51C4D6C3800C3BDD6 /* Geometry */,
 				43EC1FC11C4D539A00C3BDD6 /* Images */,
 			);
 			name = lib;
@@ -130,6 +138,23 @@
 				43EC1FC81C4D56C300C3BDD6 /* UIInterfaceIdiom.swift */,
 			);
 			name = Device;
+			sourceTree = "<group>";
+		};
+		43EC1FD21C4D623B00C3BDD6 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				43EC1FD01C4D623700C3BDD6 /* UIFont.swift */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
+		43EC1FD51C4D6C3800C3BDD6 /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				43EC1FD31C4D6C3500C3BDD6 /* UIEdgeInsets.swift */,
+				43EC1FD61C4D6DB300C3BDD6 /* UIOffset.swift */,
+			);
+			name = Geometry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,9 +270,12 @@
 				43EC1FCB1C4D5A2F00C3BDD6 /* UIDevice.swift in Sources */,
 				43EC1FC01C4D539500C3BDD6 /* USImageManipulation.swift in Sources */,
 				43EC1FC61C4D55F500C3BDD6 /* UIDeviceOrientation.swift in Sources */,
+				43EC1FD71C4D6DB300C3BDD6 /* UIOffset.swift in Sources */,
 				43EC1FC91C4D56C300C3BDD6 /* UIInterfaceIdiom.swift in Sources */,
+				43EC1FD41C4D6C3500C3BDD6 /* UIEdgeInsets.swift in Sources */,
 				43EC1FBE1C4D537300C3BDD6 /* USKitCore.swift in Sources */,
 				43EC1FCF1C4D5DAC00C3BDD6 /* UIDeviceBatteryState.swift in Sources */,
+				43EC1FD11C4D623700C3BDD6 /* UIFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
