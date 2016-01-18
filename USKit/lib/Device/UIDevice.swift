@@ -37,7 +37,7 @@ public final class UIDevice: NSObject {
 // =======================================================
 // MARK: - Orientation
     
-    public let orientation = UIInterfaceOrientation.LandscapeLeft
+    public let orientation = UIDeviceOrientation.Unknown
     public var generatesDeviceOrientationNotifications: Bool {
         get { return false }
         set { }
