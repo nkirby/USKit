@@ -25,12 +25,9 @@ public extension UIFont {
         return UIFont(name: self.fontName, size: fontSize)!
     }
     
-    @nonobjc var lineHeight: CGFloat {
+    public var lineHeight: CGFloat {
         return -1.0
     }
-//    public func lineHeight() -> CGFloat {
-//        return -1.0
-//    }
 }
 
 #endif
