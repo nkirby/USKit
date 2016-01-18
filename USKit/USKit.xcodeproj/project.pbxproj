@@ -12,7 +12,7 @@
 		43EC1FBE1C4D537300C3BDD6 /* USKitCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FBD1C4D537300C3BDD6 /* USKitCore.swift */; };
 		43EC1FC01C4D539500C3BDD6 /* USImageManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FBF1C4D539500C3BDD6 /* USImageManipulation.swift */; };
 		43EC1FC41C4D549A00C3BDD6 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FC31C4D549A00C3BDD6 /* UIImage.swift */; };
-		43EC1FC61C4D55F500C3BDD6 /* UIDeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FC51C4D55F500C3BDD6 /* UIDeviceOrientation.swift */; };
+		43EC1FC61C4D55F500C3BDD6 /* UIIInterfaceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FC51C4D55F500C3BDD6 /* UIIInterfaceOrientation.swift */; };
 		43EC1FC91C4D56C300C3BDD6 /* UIInterfaceIdiom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FC81C4D56C300C3BDD6 /* UIInterfaceIdiom.swift */; };
 		43EC1FCB1C4D5A2F00C3BDD6 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FCA1C4D5A2F00C3BDD6 /* UIDevice.swift */; };
 		43EC1FCD1C4D5CED00C3BDD6 /* UIDeviceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FCC1C4D5CED00C3BDD6 /* UIDeviceConstants.swift */; };
@@ -26,6 +26,7 @@
 		43EC1FE01C4D9EEA00C3BDD6 /* UIRectEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FDF1C4D9EEA00C3BDD6 /* UIRectEdge.swift */; };
 		43EC1FE21C4DA31E00C3BDD6 /* NSDictionary+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FE11C4DA31E00C3BDD6 /* NSDictionary+UIKit.swift */; };
 		43EC1FE41C4DA3EF00C3BDD6 /* UIFloatRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FE31C4DA3EF00C3BDD6 /* UIFloatRange.swift */; };
+		43EC1FE61C4DA55C00C3BDD6 /* UIDeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FE51C4DA55C00C3BDD6 /* UIDeviceOrientation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,7 @@
 		43EC1FBD1C4D537300C3BDD6 /* USKitCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USKitCore.swift; path = lib/USKitCore.swift; sourceTree = "<group>"; };
 		43EC1FBF1C4D539500C3BDD6 /* USImageManipulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USImageManipulation.swift; path = lib/Image/USImageManipulation.swift; sourceTree = "<group>"; };
 		43EC1FC31C4D549A00C3BDD6 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = lib/Image/UIImage.swift; sourceTree = "<group>"; };
-		43EC1FC51C4D55F500C3BDD6 /* UIDeviceOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIDeviceOrientation.swift; path = lib/Device/UIDeviceOrientation.swift; sourceTree = "<group>"; };
+		43EC1FC51C4D55F500C3BDD6 /* UIIInterfaceOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIIInterfaceOrientation.swift; path = lib/Device/UIIInterfaceOrientation.swift; sourceTree = "<group>"; };
 		43EC1FC81C4D56C300C3BDD6 /* UIInterfaceIdiom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIInterfaceIdiom.swift; path = lib/Device/UIInterfaceIdiom.swift; sourceTree = "<group>"; };
 		43EC1FCA1C4D5A2F00C3BDD6 /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIDevice.swift; path = lib/Device/UIDevice.swift; sourceTree = "<group>"; };
 		43EC1FCC1C4D5CED00C3BDD6 /* UIDeviceConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIDeviceConstants.swift; path = lib/Device/UIDeviceConstants.swift; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		43EC1FDF1C4D9EEA00C3BDD6 /* UIRectEdge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIRectEdge.swift; path = lib/Geometry/UIRectEdge.swift; sourceTree = "<group>"; };
 		43EC1FE11C4DA31E00C3BDD6 /* NSDictionary+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDictionary+UIKit.swift"; path = "lib/Extensions/NSDictionary+UIKit.swift"; sourceTree = "<group>"; };
 		43EC1FE31C4DA3EF00C3BDD6 /* UIFloatRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIFloatRange.swift; path = lib/Geometry/UIFloatRange.swift; sourceTree = "<group>"; };
+		43EC1FE51C4DA55C00C3BDD6 /* UIDeviceOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIDeviceOrientation.swift; path = lib/Device/UIDeviceOrientation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +149,8 @@
 				43EC1FCA1C4D5A2F00C3BDD6 /* UIDevice.swift */,
 				43EC1FCE1C4D5DAC00C3BDD6 /* UIDeviceBatteryState.swift */,
 				43EC1FCC1C4D5CED00C3BDD6 /* UIDeviceConstants.swift */,
-				43EC1FC51C4D55F500C3BDD6 /* UIDeviceOrientation.swift */,
+				43EC1FE51C4DA55C00C3BDD6 /* UIDeviceOrientation.swift */,
+				43EC1FC51C4D55F500C3BDD6 /* UIIInterfaceOrientation.swift */,
 				43EC1FC81C4D56C300C3BDD6 /* UIInterfaceIdiom.swift */,
 			);
 			name = Device;
@@ -293,10 +296,11 @@
 			files = (
 				43EC1FC41C4D549A00C3BDD6 /* UIImage.swift in Sources */,
 				43EC1FCD1C4D5CED00C3BDD6 /* UIDeviceConstants.swift in Sources */,
+				43EC1FE61C4DA55C00C3BDD6 /* UIDeviceOrientation.swift in Sources */,
 				43EC1FCB1C4D5A2F00C3BDD6 /* UIDevice.swift in Sources */,
 				43EC1FE01C4D9EEA00C3BDD6 /* UIRectEdge.swift in Sources */,
 				43EC1FC01C4D539500C3BDD6 /* USImageManipulation.swift in Sources */,
-				43EC1FC61C4D55F500C3BDD6 /* UIDeviceOrientation.swift in Sources */,
+				43EC1FC61C4D55F500C3BDD6 /* UIIInterfaceOrientation.swift in Sources */,
 				43EC1FD71C4D6DB300C3BDD6 /* UIOffset.swift in Sources */,
 				43EC1FE41C4DA3EF00C3BDD6 /* UIFloatRange.swift in Sources */,
 				43EC1FC91C4D56C300C3BDD6 /* UIInterfaceIdiom.swift in Sources */,

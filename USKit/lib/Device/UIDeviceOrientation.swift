@@ -8,15 +8,25 @@ import Cocoa
 
 // =======================================================
 
-public enum UIInterfaceOrientation: Int {
+public enum UIDeviceOrientation : Int {
     case Unknown
     case Portrait
     case PortraitUpsideDown
     case LandscapeLeft
     case LandscapeRight
+    case FaceUp
+    case FaceDown
 }
 
-public func UIInterfaceOrientationIsPortrait(orientation: UIInterfaceOrientation) -> Bool {
+public let UIDeviceOrientationUnknown = UIDeviceOrientation.Unknown
+public let UIDeviceOrientationPortrai = UIDeviceOrientation.Portrait
+public let UIDeviceOrientationPortraitUpsideDown = UIDeviceOrientation.PortraitUpsideDown
+public let UIDeviceOrientationLandscapeLeft = UIDeviceOrientation.LandscapeLeft
+public let UIDeviceOrientationLandscapeRight = UIDeviceOrientation.LandscapeRight
+public let UIDeviceOrientationFaceUp = UIDeviceOrientation.FaceUp
+public let UIDeviceOrientationFaceDown = UIDeviceOrientation.FaceDown
+    
+public func UIDeviceOrientationIsPortrait(orientation: UIDeviceOrientation) -> Bool {
     switch orientation {
     case .Portrait, .PortraitUpsideDown:
         return true
@@ -26,9 +36,9 @@ public func UIInterfaceOrientationIsPortrait(orientation: UIInterfaceOrientation
     }
 }
 
-public func UIInterfaceOrientationisLandscape(orientation: UIInterfaceOrientation) -> Bool {
+public func UIDeviceOrientaitonIsLandscape(orientation: UIDeviceOrientation) -> Bool {
     switch orientation {
-    case .LandscapeLeft, .LandscapeRight:
+    case .LandscapeRight, .LandscapeLeft:
         return true
         
     default:
