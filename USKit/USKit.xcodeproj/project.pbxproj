@@ -27,6 +27,7 @@
 		43EC1FE21C4DA31E00C3BDD6 /* NSDictionary+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FE11C4DA31E00C3BDD6 /* NSDictionary+UIKit.swift */; };
 		43EC1FE41C4DA3EF00C3BDD6 /* UIFloatRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FE31C4DA3EF00C3BDD6 /* UIFloatRange.swift */; };
 		43EC1FE61C4DA55C00C3BDD6 /* UIDeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FE51C4DA55C00C3BDD6 /* UIDeviceOrientation.swift */; };
+		43EC1FE81C4DAA6100C3BDD6 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FE71C4DAA6100C3BDD6 /* UIApplication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		43EC1FE11C4DA31E00C3BDD6 /* NSDictionary+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDictionary+UIKit.swift"; path = "lib/Extensions/NSDictionary+UIKit.swift"; sourceTree = "<group>"; };
 		43EC1FE31C4DA3EF00C3BDD6 /* UIFloatRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIFloatRange.swift; path = lib/Geometry/UIFloatRange.swift; sourceTree = "<group>"; };
 		43EC1FE51C4DA55C00C3BDD6 /* UIDeviceOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIDeviceOrientation.swift; path = lib/Device/UIDeviceOrientation.swift; sourceTree = "<group>"; };
+		43EC1FE71C4DAA6100C3BDD6 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIApplication.swift; path = lib/Application/UIApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				43EC1FBD1C4D537300C3BDD6 /* USKitCore.swift */,
+				43EC1FE91C4DAA6500C3BDD6 /* Application */,
 				43EC1FC71C4D55FD00C3BDD6 /* Device */,
 				43EC1FDA1C4D6EE900C3BDD6 /* Extensions */,
 				43EC1FD21C4D623B00C3BDD6 /* Font */,
@@ -184,6 +187,14 @@
 				43EC1FE11C4DA31E00C3BDD6 /* NSDictionary+UIKit.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		43EC1FE91C4DAA6500C3BDD6 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				43EC1FE71C4DAA6100C3BDD6 /* UIApplication.swift */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +313,7 @@
 				43EC1FC01C4D539500C3BDD6 /* USImageManipulation.swift in Sources */,
 				43EC1FC61C4D55F500C3BDD6 /* UIIInterfaceOrientation.swift in Sources */,
 				43EC1FD71C4D6DB300C3BDD6 /* UIOffset.swift in Sources */,
+				43EC1FE81C4DAA6100C3BDD6 /* UIApplication.swift in Sources */,
 				43EC1FE41C4DA3EF00C3BDD6 /* UIFloatRange.swift in Sources */,
 				43EC1FC91C4D56C300C3BDD6 /* UIInterfaceIdiom.swift in Sources */,
 				43EC1FD41C4D6C3500C3BDD6 /* UIEdgeInsets.swift in Sources */,
