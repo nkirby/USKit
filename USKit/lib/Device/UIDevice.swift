@@ -8,7 +8,7 @@ import Cocoa
 
 // =======================================================
     
-public class UIDevice: NSObject {
+public final class UIDevice: NSObject {
     
 // =======================================================
 // MARK: - Singleton
