@@ -25,11 +25,12 @@ public extension UIFont {
         return UIFont(name: self.fontName, size: fontSize)!
     }
     
-    // Because we can't add a instance variable in an extension. We may need to drop down
-    // to core text here.
-    public func lineHeight() -> CGFloat {
+    @nonobjc var lineHeight: CGFloat {
         return -1.0
     }
+//    public func lineHeight() -> CGFloat {
+//        return -1.0
+//    }
 }
 
 #endif
