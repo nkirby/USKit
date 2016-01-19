@@ -12,14 +12,7 @@ import Foundation
     fatalError("\(fn) is not yet implemented", file: file, line: line)
 }
 
-internal func delay(delay:Double, closure:()->()) {
-    dispatch_after(
-        dispatch_time(
-            DISPATCH_TIME_NOW,
-            Int64(delay * Double(NSEC_PER_SEC))
-        ),
-        dispatch_get_main_queue(), closure)
-}
+// =======================================================
 
 internal final class Dispatch {
     internal static func background(block: dispatch_block_t) {
