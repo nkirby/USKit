@@ -12,6 +12,7 @@ import Cocoa
     public typealias UIEvent = NSEvent
     public typealias UILocalNotification = NSObject
     public typealias UIBackgroundTaskIdentifier = NSObject
+    public typealias UIApplicationShortcutItem = NSObject
     
     public enum UIApplicationState: Int {
         case Active
@@ -33,13 +34,23 @@ import Cocoa
     public let UIBackgroundRefreshStatusDenied = UIBackgroundRefreshStatus.Denied
     public let UIBackgroundRefreshStatusAvailable = UIBackgroundRefreshStatus.Available
     
-    public protocol UIApplicationDelegate: NSObjectProtocol {
+    public enum UIUserInterfaceLayoutDirection: Int {
+        case LeftToRight
+        case RightToLeft
+    }
+
+    public let UIUserInterfaceLayoutDirectionLeftToRight = UIUserInterfaceLayoutDirection.LeftToRight
+    public let UIUserInterfaceLayoutDirectionRightToLefft = UIUserInterfaceLayoutDirection.RightToLeft
+    
+    @objc public protocol UIApplicationDelegate: NSObjectProtocol {
+        optional func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+        optional func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     }
     
 // =======================================================
 
 public class UIApplication: NSObject {
-    private(set) public weak var delegate: UIApplicationDelegate?
+    private(set) public var delegate: UIApplicationDelegate?
     
     public var keyWindow: UIWindow? {
         get { return nil }
@@ -75,9 +86,48 @@ public class UIApplication: NSObject {
         set { }
     }
     
-    private static let _sharedApplication = UIApplication()
+    public static var shortcutItems: [UIApplicationShortcutItem]? {
+        get { return nil }
+        set { }
+    }
+    
+    public var protectedDataAvailable = false
+    
+    public var statusBarFrame = CGRect.zero
+    public var networkActivityIndicatorVisible: Bool {
+        get { return false }
+        set { }
+    }
+    
+    public var applicationIconBadgeNumber: Int {
+        get { return 0 }
+        set { }
+    }
+    
+    public var userInterfaceLayoutDirection: UIUserInterfaceLayoutDirection {
+        get { return .LeftToRight }
+    }
+    
+    public var preferredContentSizeCategory: String {
+        get { return "" }
+    }
+    
+    public var statusBarOrientationAnimationDuration: NSTimeInterval = 0.0
+    
+// =======================================================
+// MARK: - Init, etc...
+
     public static func sharedApplication() -> UIApplication {
-        return self._sharedApplication
+        return USApplication.sharedApplication().uiApplication!
+    }
+
+    internal init(delegate: UIApplicationDelegate) {
+        self.delegate = delegate
+        super.init()
+    }
+    
+    deinit {
+        self.delegate = nil
     }
     
 // =======================================================
@@ -169,6 +219,30 @@ public class UIApplication: NSObject {
     
     public func endBackgroundtask(identifier: UIBackgroundTaskIdentifier) {
         USUnimplemented()
+    }
+    
+// =======================================================
+// MARK: - State Restoration
+    
+    public func extendStateRestoration() {
+    }
+    
+    public func completeStateRestoration() {
+    }
+    
+    public func ignoreSnapshotOnNextApplicationLaunch() {
+    }
+    
+    public class func registerObjectForStateRestoration(object: NSObject, restorationIdentifier identifier: String) {
+    }
+    
+// =======================================================
+// MARK: - Remote Control Events
+    
+    public func beginReceivingRemoteControlEvents() {
+    }
+    
+    public func endReceivingRemoteControlEvents() {
     }
 }
 

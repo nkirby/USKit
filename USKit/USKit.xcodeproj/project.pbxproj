@@ -28,6 +28,7 @@
 		43EC1FE41C4DA3EF00C3BDD6 /* UIFloatRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FE31C4DA3EF00C3BDD6 /* UIFloatRange.swift */; };
 		43EC1FE61C4DA55C00C3BDD6 /* UIDeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FE51C4DA55C00C3BDD6 /* UIDeviceOrientation.swift */; };
 		43EC1FE81C4DAA6100C3BDD6 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FE71C4DAA6100C3BDD6 /* UIApplication.swift */; };
+		43EC1FEB1C4DB26700C3BDD6 /* USApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FEA1C4DB26700C3BDD6 /* USApplication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		43EC1FE31C4DA3EF00C3BDD6 /* UIFloatRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIFloatRange.swift; path = lib/Geometry/UIFloatRange.swift; sourceTree = "<group>"; };
 		43EC1FE51C4DA55C00C3BDD6 /* UIDeviceOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIDeviceOrientation.swift; path = lib/Device/UIDeviceOrientation.swift; sourceTree = "<group>"; };
 		43EC1FE71C4DAA6100C3BDD6 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIApplication.swift; path = lib/Application/UIApplication.swift; sourceTree = "<group>"; };
+		43EC1FEA1C4DB26700C3BDD6 /* USApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USApplication.swift; path = lib/Application/USApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 		43EC1FE91C4DAA6500C3BDD6 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				43EC1FEA1C4DB26700C3BDD6 /* USApplication.swift */,
 				43EC1FE71C4DAA6100C3BDD6 /* UIApplication.swift */,
 			);
 			name = Application;
@@ -315,6 +318,7 @@
 				43EC1FD71C4D6DB300C3BDD6 /* UIOffset.swift in Sources */,
 				43EC1FE81C4DAA6100C3BDD6 /* UIApplication.swift in Sources */,
 				43EC1FE41C4DA3EF00C3BDD6 /* UIFloatRange.swift in Sources */,
+				43EC1FEB1C4DB26700C3BDD6 /* USApplication.swift in Sources */,
 				43EC1FC91C4D56C300C3BDD6 /* UIInterfaceIdiom.swift in Sources */,
 				43EC1FD41C4D6C3500C3BDD6 /* UIEdgeInsets.swift in Sources */,
 				43EC1FD91C4D6EE500C3BDD6 /* NSString+StringConversions.swift in Sources */,
