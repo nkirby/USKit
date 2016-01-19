@@ -10,6 +10,8 @@
 		435A47641C4DE1660080EC70 /* UIUserInterfaceLayoutDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A47631C4DE1660080EC70 /* UIUserInterfaceLayoutDirection.swift */; };
 		435A47661C4DE25E0080EC70 /* UIApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A47651C4DE25E0080EC70 /* UIApplicationDelegate.swift */; };
 		435A47681C4DF47C0080EC70 /* UIApplication+Windows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A47671C4DF47C0080EC70 /* UIApplication+Windows.swift */; };
+		435A476A1C4DF6DC0080EC70 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A47691C4DF6DC0080EC70 /* UIScreen.swift */; };
+		435A476D1C4DFB2E0080EC70 /* UIScreenOverscanCompensation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A476C1C4DFB2E0080EC70 /* UIScreenOverscanCompensation.swift */; };
 		43EC1F8F1C4D51B400C3BDD6 /* USKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 43EC1F8E1C4D51B400C3BDD6 /* USKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43EC1F961C4D51B400C3BDD6 /* USKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC1F8B1C4D51B400C3BDD6 /* USKit.framework */; };
 		43EC1FC01C4D539500C3BDD6 /* USImageManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FBF1C4D539500C3BDD6 /* USImageManipulation.swift */; };
@@ -50,6 +52,8 @@
 		435A47631C4DE1660080EC70 /* UIUserInterfaceLayoutDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIUserInterfaceLayoutDirection.swift; path = lib/Application/UIUserInterfaceLayoutDirection.swift; sourceTree = "<group>"; };
 		435A47651C4DE25E0080EC70 /* UIApplicationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIApplicationDelegate.swift; path = lib/Application/UIApplicationDelegate.swift; sourceTree = "<group>"; };
 		435A47671C4DF47C0080EC70 /* UIApplication+Windows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIApplication+Windows.swift"; path = "lib/Application/UIApplication+Windows.swift"; sourceTree = "<group>"; };
+		435A47691C4DF6DC0080EC70 /* UIScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIScreen.swift; path = lib/Screen/UIScreen.swift; sourceTree = "<group>"; };
+		435A476C1C4DFB2E0080EC70 /* UIScreenOverscanCompensation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIScreenOverscanCompensation.swift; path = lib/Screen/UIScreenOverscanCompensation.swift; sourceTree = "<group>"; };
 		43EC1F8B1C4D51B400C3BDD6 /* USKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = USKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43EC1F8E1C4D51B400C3BDD6 /* USKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USKit.h; sourceTree = "<group>"; };
 		43EC1F901C4D51B400C3BDD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,6 +102,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		435A476B1C4DF6E00080EC70 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				435A47691C4DF6DC0080EC70 /* UIScreen.swift */,
+				435A476C1C4DFB2E0080EC70 /* UIScreenOverscanCompensation.swift */,
+			);
+			name = Screen;
+			sourceTree = "<group>";
+		};
 		43EC1F811C4D51B400C3BDD6 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +167,7 @@
 				43EC1FD21C4D623B00C3BDD6 /* Font */,
 				43EC1FD51C4D6C3800C3BDD6 /* Geometry */,
 				43EC1FC11C4D539A00C3BDD6 /* Images */,
+				435A476B1C4DF6E00080EC70 /* Screen */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -337,6 +351,7 @@
 				43EC1FE61C4DA55C00C3BDD6 /* UIDeviceOrientation.swift in Sources */,
 				43EC1FCB1C4D5A2F00C3BDD6 /* UIDevice.swift in Sources */,
 				43EC1FE01C4D9EEA00C3BDD6 /* UIRectEdge.swift in Sources */,
+				435A476D1C4DFB2E0080EC70 /* UIScreenOverscanCompensation.swift in Sources */,
 				43EC1FC01C4D539500C3BDD6 /* USImageManipulation.swift in Sources */,
 				435A47641C4DE1660080EC70 /* UIUserInterfaceLayoutDirection.swift in Sources */,
 				43EC1FF41C4DDF5F00C3BDD6 /* USDispatch.swift in Sources */,
@@ -348,6 +363,7 @@
 				43EC1FC91C4D56C300C3BDD6 /* UIInterfaceIdiom.swift in Sources */,
 				43EC1FD41C4D6C3500C3BDD6 /* UIEdgeInsets.swift in Sources */,
 				43EC1FD91C4D6EE500C3BDD6 /* NSString+StringConversions.swift in Sources */,
+				435A476A1C4DF6DC0080EC70 /* UIScreen.swift in Sources */,
 				43EC1FF71C4DE11300C3BDD6 /* UIApplication.swift in Sources */,
 				43EC1FE21C4DA31E00C3BDD6 /* NSDictionary+UIKit.swift in Sources */,
 				43EC1FCF1C4D5DAC00C3BDD6 /* UIDeviceBatteryState.swift in Sources */,
