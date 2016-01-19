@@ -13,17 +13,7 @@ import Cocoa
     public typealias UILocalNotification = NSObject
     public typealias UIBackgroundTaskIdentifier = NSObject
     public typealias UIApplicationShortcutItem = NSObject
-    
-    public enum UIApplicationState: Int {
-        case Active
-        case Inactive
-        case Background
-    }
-    
-    public let UIApplicationStateActive = UIApplicationState.Active
-    public let UIApplicationStateInactive = UIApplicationState.Inactive
-    public let UIApplicationStateBackground = UIApplicationState.Background
-    
+        
     public enum UIBackgroundRefreshStatus: Int {
         case Restricted
         case Denied
@@ -34,32 +24,26 @@ import Cocoa
     public let UIBackgroundRefreshStatusDenied = UIBackgroundRefreshStatus.Denied
     public let UIBackgroundRefreshStatusAvailable = UIBackgroundRefreshStatus.Available
     
-    public enum UIUserInterfaceLayoutDirection: Int {
-        case LeftToRight
-        case RightToLeft
-    }
-
-    public let UIUserInterfaceLayoutDirectionLeftToRight = UIUserInterfaceLayoutDirection.LeftToRight
-    public let UIUserInterfaceLayoutDirectionRightToLefft = UIUserInterfaceLayoutDirection.RightToLeft
-    
-    @objc public protocol UIApplicationDelegate: NSObjectProtocol {
-        optional func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
-        optional func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
-    }
-    
+        
 // =======================================================
+/**
+UIApplication, when used in an NSApplication, is a proxy object receiving many of the same
+messages as the standard NSApplication lifecycle, while stubbing out the elements needed in order
+to make your iOS app compile.
 
+In general, any Mac-specific code should be handled from an NSApplication/NSApplicationDelegate standpoint.
+    
+A few notes about UIApplication/UIApplicationDelegate:
+    - Supplying the window property will do nothing. 
+    - UIApplication is not a UIResponder (for now...). Use NSApplication for that.
+    - All windowing (+ screen behaviors) are handled on the Mac side of the code. This allows you to supply
+        any form of Mac specific containerization of views that you want to. Methods on UIApplication about
+        windows and screens defer to the AppKit implementations anyway.
+*/
+    
 public class UIApplication: NSObject {
     private(set) public var delegate: UIApplicationDelegate?
-    
-    public var keyWindow: UIWindow? {
-        get { return nil }
-    }
-    
-    public var windows: [UIWindow] {
-        get { return [] }
-    }
-    
+        
     public var applicationSupportsShakeToEdit: Bool {
         get { return false }
         set { }
@@ -68,11 +52,7 @@ public class UIApplication: NSObject {
     public var scheduledLocalNotifications: [UILocalNotification]? {
         get { return nil }
     }
-    
-    public var applicationState: UIApplicationState {
-        get { return .Active }
-    }
-    
+        
     public var backgroundTimeRemaining: NSTimeInterval {
         get { return 0.0 }
     }
@@ -103,11 +83,7 @@ public class UIApplication: NSObject {
         get { return 0 }
         set { }
     }
-    
-    public var userInterfaceLayoutDirection: UIUserInterfaceLayoutDirection {
-        get { return .LeftToRight }
-    }
-    
+        
     public var preferredContentSizeCategory: String {
         get { return "" }
     }
@@ -134,11 +110,11 @@ public class UIApplication: NSObject {
 // MARK: - Events
     
     public func sendEvent(event: UIEvent) {
-        USUnimplemented()
+        NSApplication.sharedApplication().sendEvent(event)
     }
     
     public func sendAction(action: Selector, to target: AnyObject?, from sender: AnyObject?, forEvent event: UIEvent?) -> Bool {
-        USUnimplemented()
+        return NSApplication.sharedApplication().sendAction(action, to: target, from: sender)
     }
     
     public func beginIgnoringInteractionEvents() {

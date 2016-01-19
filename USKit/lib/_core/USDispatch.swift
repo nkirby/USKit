@@ -6,15 +6,8 @@
 import Foundation
 
 // =======================================================
-// From: https://github.com/apple/swift-corelibs-foundation/blob/master/Foundation/NSObjCRuntime.swift#L79
 
-@noreturn public func USUnimplemented(fn: String = __FUNCTION__, file: StaticString = __FILE__, line: UInt = __LINE__) {
-    fatalError("\(fn) is not yet implemented", file: file, line: line)
-}
-
-// =======================================================
-
-internal final class Dispatch {
+internal final class USDispatch {
     internal static func background(block: dispatch_block_t) {
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), block)
     }
