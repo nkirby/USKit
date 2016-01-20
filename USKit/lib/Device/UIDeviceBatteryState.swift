@@ -9,7 +9,7 @@ import Cocoa
 public enum UIDeviceBatteryState: Int {
     case Unknown
     case Unplugged
-    case Chargin
+    case Charging
     case Full
 }
 

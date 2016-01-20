@@ -14,6 +14,7 @@
 		43EC1F691C4D517500C3BDD6 /* USKitMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1F681C4D517500C3BDD6 /* USKitMacTests.swift */; };
 		43EC1F741C4D517500C3BDD6 /* USKitMacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1F731C4D517500C3BDD6 /* USKitMacUITests.swift */; };
 		43EC1FB91C4D51EF00C3BDD6 /* USKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC1FB81C4D51EF00C3BDD6 /* USKit.framework */; };
+		43EC1FED1C4DB59B00C3BDD6 /* UIAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FEC1C4DB59B00C3BDD6 /* UIAppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		43EC1F731C4D517500C3BDD6 /* USKitMacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USKitMacUITests.swift; sourceTree = "<group>"; };
 		43EC1F751C4D517500C3BDD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43EC1FB81C4D51EF00C3BDD6 /* USKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = USKit.framework; path = ../USKit/build/Debug/USKit.framework; sourceTree = "<group>"; };
+		43EC1FEC1C4DB59B00C3BDD6 /* UIAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				43EC1F5A1C4D517500C3BDD6 /* Assets.xcassets */,
 				43EC1F5C1C4D517500C3BDD6 /* Main.storyboard */,
 				43EC1F5F1C4D517500C3BDD6 /* Info.plist */,
+				43EC1FEC1C4DB59B00C3BDD6 /* UIAppDelegate.swift */,
 			);
 			path = USKitMac;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43EC1FED1C4DB59B00C3BDD6 /* UIAppDelegate.swift in Sources */,
 				43EC1F591C4D517500C3BDD6 /* ViewController.swift in Sources */,
 				43EC1F571C4D517500C3BDD6 /* AppDelegate.swift in Sources */,
 			);

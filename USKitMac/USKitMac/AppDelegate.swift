@@ -13,6 +13,8 @@ import USKit
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        let appDelegate = UIAppDelegate()
+        USApplication.sharedApplication().forwardApplicationLifecycleTo(appDelegate)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
