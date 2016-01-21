@@ -20,9 +20,11 @@ public enum UITouchPhase : Int {
     case Cancelled
 }
 
+// =======================================================
+    
 public class UITouch: NSObject {
     public let view: UIView? = nil
-    public let window: UIWindow? = nil
+    public let window: UIWindow?
     public let majorRadius: CGFloat = 0.0
     public let majorRadiusToTolerance: CGFloat = 0.0
     
@@ -36,6 +38,12 @@ public class UITouch: NSObject {
     public let altitudeAngle: CGFloat = 0.0
     
     public let gestureRecognizers: [UIGestureRecognizer]? = nil
+    
+    internal init(pointerEvent: NSEvent) {
+        self.window = pointerEvent.window
+        
+        super.init()
+    }
     
     func locationInView(view: UIView?) -> CGPoint {
         USUnimplemented()

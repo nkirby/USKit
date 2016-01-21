@@ -35,9 +35,9 @@ class ViewController: NSViewController {
         self.view.addSubview(self.containerView)
         
         let testView = TestView(frame: self.containerView.bounds)
-        testView.wantsLayer = true
-        testView.layer?.backgroundColor = NSColor.redColor().CGColor
-        self.containerView.addSubview(testView)
+        testView.autoresizingMask = [.ViewWidthSizable, .ViewHeightSizable]
+        testView.backgroundColor = NSColor.redColor()
+        self.containerView.presentView(testView)
     }
 
     override func viewWillLayout() {

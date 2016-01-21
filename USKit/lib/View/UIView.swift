@@ -5,54 +5,113 @@
 
 #if os(OSX)
 import Cocoa
-
-    private enum UIViewTouchState {
-        case Up
-        case Started
-        case Moved
-    }
+  
+    public typealias UIColor = NSColor
     
-public class UIView: NSView {
-    private var _touchState = UIViewTouchState.Up
-    
-    private(set) public var backingView: NSView?
+public class UIView: NSResponder {
+    private(set) public var backingView: NSView!
     public var shouldSendTouchEventsAsMouseEvents = true
     
-    public override init(frame frameRect: NSRect) {
-        super.init(frame: frameRect)
+    public var backgroundColor: UIColor? {
+        didSet {
+            self.backingView.layer?.backgroundColor = self.backgroundColor?.CGColor
+        }
+    }
+    
+// =======================================================
+// MARK: - Init, etc...
+    
+    public override convenience init() {
+        self.init(frame: CGRect.zero)
+    }
+    
+    public init(frame: CGRect) {
+        super.init()
+        
+        self.setupView()
+        self.backingView.frame = frame
+        
+        self.backingView.addObserver(self, forKeyPath: "nextResponder", options: NSKeyValueObservingOptions.New, context: nil)
     }
     
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     
+    public override var acceptsFirstResponder: Bool {
+        return true
+    }
+    
+    private func setupView() {
+        let view = NSView(frame: CGRect.zero)
+        view.wantsLayer = true
+        self.backingView = view
+    }
+
+// =======================================================
+// MARK: - KVO
+    
+    public override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        guard let key = keyPath else {
+            return
+        }
+        
+        switch key {
+        case "nextResponder":
+            if let obj = object as? NSObject where obj == self.backingView {
+                if self.backingView.nextResponder != self {
+                    self.nextResponder = self.backingView.nextResponder
+                    self.backingView.nextResponder = self
+                }
+            }
+            
+        default:
+            break
+        }
+    }
+    
+
+// =======================================================
+// MARK: - Responding
+    
+    public override func mouseEntered(theEvent: NSEvent) {
+        self.nextResponder?.mouseEntered(theEvent)
+    }
+    
+    public override func mouseExited(theEvent: NSEvent) {
+        self.nextResponder?.mouseExited(theEvent)
+    }
+    
     public override func mouseDown(theEvent: NSEvent) {
-        super.mouseDown(theEvent)
+        self.nextResponder?.mouseDown(theEvent)
         
         let event = UIEvent(pointerEvent: theEvent)
         let touches = event.allTouches() ?? []
         self.touchesBegan(touches, withEvent: event)
-        self._touchState = .Started
     }
 
     public override func mouseUp(theEvent: NSEvent) {
-        super.mouseUp(theEvent)
+        self.nextResponder?.mouseUp(theEvent)
         
         let event = UIEvent(pointerEvent: theEvent)
         let touches = event.allTouches() ?? []
         self.touchesEnded(touches, withEvent: event)
-        self._touchState = .Up
-    }
-    
-    public override func mouseMoved(theEvent: NSEvent) {
-        super.mouseMoved(theEvent)
     }
     
     public override func mouseDragged(theEvent: NSEvent) {
+        self.nextResponder?.mouseDragged(theEvent)
+        
         let event = UIEvent(pointerEvent: theEvent)
         let touches = event.allTouches() ?? []
         self.touchesMoved(touches, withEvent: event)
+        
+        
+    }
+    
+    public var autoresizingMask: NSAutoresizingMaskOptions {
+        get { return self.backingView.autoresizingMask }
+        set { self.backingView.autoresizingMask = newValue }
     }
 }
-    
+
 #endif

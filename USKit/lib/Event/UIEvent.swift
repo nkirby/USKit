@@ -35,13 +35,19 @@ public class UIEvent: NSObject {
     private(set) public var type = UIEventType.Touches
     private(set) public var subtype = UIEventSubtype.None
 
+    private let _touches: Set<UITouch>?
+    
     public init(pointerEvent: NSEvent) {
         self.pointerEvent = pointerEvent
+        
+        let touch = UITouch(pointerEvent: pointerEvent)
+        self._touches = [touch]
+        
         super.init()
     }
     
     public func allTouches() -> Set<UITouch>? {
-        return nil
+        return self._touches
     }
     
     public func touchesForView(view: NSView) -> Set<UITouch>? {

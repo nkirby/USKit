@@ -43,6 +43,13 @@ public class USContainerView: NSView {
     
     public override func updateLayer() {
         self.layer?.backgroundColor = NSColor.redColor().CGColor
+    }
+    
+    private var subview: UIView?
+    
+    public func presentView(view: UIView, animated: Bool = false) {
+        self.subview = view
+        self.addSubview(view.backingView)
     }    
 }
     
