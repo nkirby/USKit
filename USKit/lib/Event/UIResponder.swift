@@ -5,8 +5,6 @@
 
 #if os(OSX)
 import Cocoa
-
-    public typealias UITouch = NSObject
     
 public typealias UIResponder = NSResponder
     

@@ -7,6 +7,10 @@
 import Cocoa
 
 public class USContainerView: NSView {
+    public override var flipped: Bool {
+        get { return true }
+        set { }
+    }
     public override var canDrawSubviewsIntoLayer: Bool {
         get { return true }
         set { }
@@ -38,15 +42,8 @@ public class USContainerView: NSView {
     }
     
     public override func updateLayer() {
-        NSLog("update layer.")
-        NSLog("\(self.layer)")
         self.layer?.backgroundColor = NSColor.redColor().CGColor
-    }
-    
-    public override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
-        NSLog("draw rect.")
-    }
+    }    
 }
     
 #endif

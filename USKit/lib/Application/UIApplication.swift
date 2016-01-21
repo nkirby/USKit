@@ -109,7 +109,7 @@ public class UIApplication: NSObject {
 // MARK: - Events
     
     public func sendEvent(event: UIEvent) {
-        NSApplication.sharedApplication().sendEvent(event)
+        NSApplication.sharedApplication().sendEvent(event.pointerEvent)
     }
     
     public func sendAction(action: Selector, to target: AnyObject?, from sender: AnyObject?, forEvent event: UIEvent?) -> Bool {

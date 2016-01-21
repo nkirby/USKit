@@ -6,9 +6,42 @@
 #if os(OSX)
 import Cocoa
 
-public class UIEvent: NSEvent {    
+public typealias UIGestureRecognizer = NSObject
+    
+public enum UIEventType : Int {
+    case Touches
+    case Motion
+    case RemoteControl
+    case Presses
+}
+
+public enum UIEventSubtype : Int {
+    case None
+    case MotionShake
+    case RemoteControlPlay
+    case RemoteControlPause
+    case RemoteControlStop
+    case RemoteControlTogglePlayPause
+    case RemoteControlNextTrack
+    case RemoteControlPreviousTrack
+    case RemoteControlBeginSeekingBackward
+    case RemoteControlEndSeekingBackward
+    case RemoteControlBeginSeekingForward
+    case RemoteControlEndSeekingForward
+}
+
+public class UIEvent: NSObject {
+    public let pointerEvent: NSEvent
+    private(set) public var type = UIEventType.Touches
+    private(set) public var subtype = UIEventSubtype.None
+
+    public init(pointerEvent: NSEvent) {
+        self.pointerEvent = pointerEvent
+        super.init()
+    }
+    
     public func allTouches() -> Set<UITouch>? {
-        USUnimplemented()
+        return nil
     }
     
     public func touchesForView(view: NSView) -> Set<UITouch>? {
@@ -19,6 +52,9 @@ public class UIEvent: NSEvent {
         USUnimplemented()
     }
     
+    public func touchesForGestureRecognizer(recognizer: UIGestureRecognizer) -> Set<UITouch>? {
+        USUnimplemented()
+    }
     
 }
 

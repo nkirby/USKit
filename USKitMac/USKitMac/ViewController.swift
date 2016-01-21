@@ -13,9 +13,14 @@ class TestView: UIView {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         NSLog("touchesBegan")
     }
-    override func mouseDown(theEvent: NSEvent) {
-        super.mouseDown(theEvent)
-        NSLog("mouseDown")
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        NSLog("touchesEnded")
+    }
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        NSLog("touchesMoved")
+    }
+    override func touchesCancelled(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        NSLog("touchesEnded")
     }
 }
 
