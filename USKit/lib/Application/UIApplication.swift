@@ -9,7 +9,6 @@ import Cocoa
     // Temp
     public typealias UIUserNotificationSettings = NSObject
     public typealias UIWindow = NSWindow
-    public typealias UIEvent = NSEvent
     public typealias UILocalNotification = NSObject
     public typealias UIBackgroundTaskIdentifier = NSObject
     public typealias UIApplicationShortcutItem = NSObject

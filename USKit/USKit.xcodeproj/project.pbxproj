@@ -12,6 +12,12 @@
 		435A47681C4DF47C0080EC70 /* UIApplication+Windows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A47671C4DF47C0080EC70 /* UIApplication+Windows.swift */; };
 		435A476A1C4DF6DC0080EC70 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A47691C4DF6DC0080EC70 /* UIScreen.swift */; };
 		435A476D1C4DFB2E0080EC70 /* UIScreenOverscanCompensation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A476C1C4DFB2E0080EC70 /* UIScreenOverscanCompensation.swift */; };
+		43917A471C50532F00940D5D /* USContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43917A461C50532F00940D5D /* USContainerView.swift */; };
+		43917A4B1C50791500940D5D /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43917A4A1C50791500940D5D /* UIResponder.swift */; };
+		43917A4F1C50792900940D5D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43917A4E1C50792900940D5D /* UIView.swift */; };
+		43917A521C50794200940D5D /* UIView+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43917A511C50794200940D5D /* UIView+UIKit.swift */; };
+		43917A541C5079A800940D5D /* UIEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43917A531C5079A800940D5D /* UIEvent.swift */; };
+		43917A561C507A2100940D5D /* UITouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43917A551C507A2100940D5D /* UITouch.swift */; };
 		43EC1F8F1C4D51B400C3BDD6 /* USKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 43EC1F8E1C4D51B400C3BDD6 /* USKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43EC1F961C4D51B400C3BDD6 /* USKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC1F8B1C4D51B400C3BDD6 /* USKit.framework */; };
 		43EC1FC01C4D539500C3BDD6 /* USImageManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FBF1C4D539500C3BDD6 /* USImageManipulation.swift */; };
@@ -54,6 +60,12 @@
 		435A47671C4DF47C0080EC70 /* UIApplication+Windows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIApplication+Windows.swift"; path = "lib/Application/UIApplication+Windows.swift"; sourceTree = "<group>"; };
 		435A47691C4DF6DC0080EC70 /* UIScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIScreen.swift; path = lib/Screen/UIScreen.swift; sourceTree = "<group>"; };
 		435A476C1C4DFB2E0080EC70 /* UIScreenOverscanCompensation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIScreenOverscanCompensation.swift; path = lib/Screen/UIScreenOverscanCompensation.swift; sourceTree = "<group>"; };
+		43917A461C50532F00940D5D /* USContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USContainerView.swift; path = lib/_core/USContainerView.swift; sourceTree = "<group>"; };
+		43917A4A1C50791500940D5D /* UIResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIResponder.swift; path = lib/Event/UIResponder.swift; sourceTree = "<group>"; };
+		43917A4E1C50792900940D5D /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = lib/View/UIView.swift; sourceTree = "<group>"; };
+		43917A511C50794200940D5D /* UIView+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+UIKit.swift"; path = "lib/View/UIView+UIKit.swift"; sourceTree = "<group>"; };
+		43917A531C5079A800940D5D /* UIEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIEvent.swift; path = lib/Event/UIEvent.swift; sourceTree = "<group>"; };
+		43917A551C507A2100940D5D /* UITouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITouch.swift; path = lib/Event/UITouch.swift; sourceTree = "<group>"; };
 		43EC1F8B1C4D51B400C3BDD6 /* USKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = USKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43EC1F8E1C4D51B400C3BDD6 /* USKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USKit.h; sourceTree = "<group>"; };
 		43EC1F901C4D51B400C3BDD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,6 +123,25 @@
 			name = Screen;
 			sourceTree = "<group>";
 		};
+		43917A431C50504700940D5D /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				43917A4A1C50791500940D5D /* UIResponder.swift */,
+				43917A531C5079A800940D5D /* UIEvent.swift */,
+				43917A551C507A2100940D5D /* UITouch.swift */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
+		43917A501C50793000940D5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43917A4E1C50792900940D5D /* UIView.swift */,
+				43917A511C50794200940D5D /* UIView+UIKit.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		43EC1F811C4D51B400C3BDD6 = {
 			isa = PBXGroup;
 			children = (
@@ -162,12 +193,14 @@
 			children = (
 				43EC1FF21C4DDF4E00C3BDD6 /* _core */,
 				43EC1FE91C4DAA6500C3BDD6 /* Application */,
+				43917A431C50504700940D5D /* Events */,
 				43EC1FC71C4D55FD00C3BDD6 /* Device */,
 				43EC1FDA1C4D6EE900C3BDD6 /* Extensions */,
 				43EC1FD21C4D623B00C3BDD6 /* Font */,
 				43EC1FD51C4D6C3800C3BDD6 /* Geometry */,
 				43EC1FC11C4D539A00C3BDD6 /* Images */,
 				435A476B1C4DF6E00080EC70 /* Screen */,
+				43917A501C50793000940D5D /* View */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -233,6 +266,7 @@
 				43EC1FEF1C4DDF4500C3BDD6 /* USKitCore.swift */,
 				43EC1FF31C4DDF5F00C3BDD6 /* USDispatch.swift */,
 				43EC1FEE1C4DDF4500C3BDD6 /* USApplication.swift */,
+				43917A461C50532F00940D5D /* USContainerView.swift */,
 			);
 			name = _core;
 			sourceTree = "<group>";
@@ -345,12 +379,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43917A4F1C50792900940D5D /* UIView.swift in Sources */,
 				43EC1FF61C4DDFA600C3BDD6 /* UIApplication+State.swift in Sources */,
 				43EC1FC41C4D549A00C3BDD6 /* UIImage.swift in Sources */,
 				43EC1FCD1C4D5CED00C3BDD6 /* UIDeviceConstants.swift in Sources */,
 				43EC1FE61C4DA55C00C3BDD6 /* UIDeviceOrientation.swift in Sources */,
 				43EC1FCB1C4D5A2F00C3BDD6 /* UIDevice.swift in Sources */,
+				43917A521C50794200940D5D /* UIView+UIKit.swift in Sources */,
 				43EC1FE01C4D9EEA00C3BDD6 /* UIRectEdge.swift in Sources */,
+				43917A541C5079A800940D5D /* UIEvent.swift in Sources */,
 				435A476D1C4DFB2E0080EC70 /* UIScreenOverscanCompensation.swift in Sources */,
 				43EC1FC01C4D539500C3BDD6 /* USImageManipulation.swift in Sources */,
 				435A47641C4DE1660080EC70 /* UIUserInterfaceLayoutDirection.swift in Sources */,
@@ -365,10 +402,13 @@
 				43EC1FD91C4D6EE500C3BDD6 /* NSString+StringConversions.swift in Sources */,
 				435A476A1C4DF6DC0080EC70 /* UIScreen.swift in Sources */,
 				43EC1FF71C4DE11300C3BDD6 /* UIApplication.swift in Sources */,
+				43917A4B1C50791500940D5D /* UIResponder.swift in Sources */,
 				43EC1FE21C4DA31E00C3BDD6 /* NSDictionary+UIKit.swift in Sources */,
+				43917A561C507A2100940D5D /* UITouch.swift in Sources */,
 				43EC1FCF1C4D5DAC00C3BDD6 /* UIDeviceBatteryState.swift in Sources */,
 				43EC1FF11C4DDF4500C3BDD6 /* USKitCore.swift in Sources */,
 				43EC1FF01C4DDF4500C3BDD6 /* USApplication.swift in Sources */,
+				43917A471C50532F00940D5D /* USContainerView.swift in Sources */,
 				43EC1FDE1C4D9D5000C3BDD6 /* NSIndexPath+UIKit.swift in Sources */,
 				43EC1FD11C4D623700C3BDD6 /* UIFont.swift in Sources */,
 				43EC1FDC1C4D6F8500C3BDD6 /* NSValue+UIKit.swift in Sources */,

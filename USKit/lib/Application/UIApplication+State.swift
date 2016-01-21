@@ -12,10 +12,6 @@ public enum UIApplicationState: Int {
     case Background
 }
 
-public let UIApplicationStateActive = UIApplicationState.Active
-public let UIApplicationStateInactive = UIApplicationState.Inactive
-public let UIApplicationStateBackground = UIApplicationState.Background
-
 // =======================================================
 // MARK: - Notifications
 
