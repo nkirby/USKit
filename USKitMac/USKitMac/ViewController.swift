@@ -24,6 +24,12 @@ class TestView: UIView {
     }
 }
 
+class Test2View: UIView {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        NSLog("2: touchesBegan")
+    }
+}
+
 class ViewController: NSViewController {
     private let containerView = USContainerView(frame: NSRect.zero)
     
@@ -38,6 +44,11 @@ class ViewController: NSViewController {
         testView.autoresizingMask = [.ViewWidthSizable, .ViewHeightSizable]
         testView.backgroundColor = NSColor.redColor()
         self.containerView.presentView(testView)
+        
+        let blueView = Test2View(frame: CGRect(x: 10, y: 10, width: 44, height: 44))
+        blueView.backgroundColor = NSColor.blueColor()
+        blueView.autoresizingMask = [.ViewMinYMargin, .ViewMaxXMargin]
+        testView.addSubview(blueView)
     }
 
     override func viewWillLayout() {

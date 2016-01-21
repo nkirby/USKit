@@ -9,6 +9,7 @@ import Cocoa
     public typealias UIColor = NSColor
     
 public class UIView: NSResponder {
+    private var _subviews = [UIView]()
     private(set) public var backingView: NSView!
     public var shouldSendTouchEventsAsMouseEvents = true
     
@@ -111,6 +112,18 @@ public class UIView: NSResponder {
     public var autoresizingMask: NSAutoresizingMaskOptions {
         get { return self.backingView.autoresizingMask }
         set { self.backingView.autoresizingMask = newValue }
+    }
+    
+    
+// =======================================================
+// MARK: - Subviews
+    
+    public func addSubview(view: UIView) {
+        if !self._subviews.contains(view) {
+            view.backingView.frame = view.backingView.frame.flippedWithin(self.backingView.frame)
+            self._subviews.append(view)
+            self.backingView.addSubview(view.backingView)
+        }
     }
 }
 

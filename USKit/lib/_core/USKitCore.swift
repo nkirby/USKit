@@ -11,3 +11,11 @@ import Foundation
 @noreturn public func USUnimplemented(fn: String = __FUNCTION__, file: StaticString = __FILE__, line: UInt = __LINE__) {
     fatalError("\(fn) is not yet implemented", file: file, line: line)
 }
+
+// =======================================================
+
+extension CGRect {
+    public func flippedWithin(parentFrame: CGRect) -> CGRect {
+        return CGRect(x: self.origin.x, y: (parentFrame.size.height - self.origin.y) - self.size.height, width: self.size.width, height: self.size.height)
+    }
+}

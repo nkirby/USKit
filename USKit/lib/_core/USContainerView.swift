@@ -11,10 +11,10 @@ public class USContainerView: NSView {
         get { return true }
         set { }
     }
-    public override var canDrawSubviewsIntoLayer: Bool {
-        get { return true }
-        set { }
-    }
+//    public override var canDrawSubviewsIntoLayer: Bool {
+//        get { return true }
+//        set { }
+//    }
     public override var wantsUpdateLayer: Bool {
         return true
     }
@@ -42,7 +42,7 @@ public class USContainerView: NSView {
     }
     
     public override func updateLayer() {
-        self.layer?.backgroundColor = NSColor.redColor().CGColor
+//        self.layer?.backgroundColor = NSColor.redColor().CGColor
     }
     
     private var subview: UIView?
