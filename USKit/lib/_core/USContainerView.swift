@@ -49,8 +49,14 @@ public class USContainerView: NSView {
     
     public func presentView(view: UIView, animated: Bool = false) {
         self.subview = view
+        view.window = self.window
         self.addSubview(view.backingView)
-    }    
+    }
+    
+    public override var frame: NSRect {
+        didSet {
+        }
+    }
 }
     
 #endif

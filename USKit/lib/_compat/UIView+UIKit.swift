@@ -11,7 +11,7 @@ import UIKit
 
     extension UIView {
         private(set) public var backingView: UIView? {
-            get { return nil }
+            get { return self }
             set { }
         }
         public var shouldSendTouchEventsAsMouseEvents: Bool {

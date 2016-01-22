@@ -17,16 +17,27 @@ class TestView: UIView {
         NSLog("touchesEnded")
     }
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        NSLog("touchesMoved")
+//        NSLog("touchesMoved")
     }
     override func touchesCancelled(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        NSLog("touchesEnded")
+//        NSLog("touchesEnded")
+    }
+    override func didAddSubview(subview: UIView) {
+        USLog("didAdd: \(subview)")
     }
 }
 
 class Test2View: UIView {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        NSLog("2: touchesBegan")
+        self.frame = CGRectOffset(self.frame, 10.0, 10.0)
+    }
+    
+    override func willMoveToSuperview(newSuperview: UIView) {
+        USLog("willMoveToSuperview")
+    }
+    
+    override func didMoveToSuperview() {
+        USLog("didMoveToSuperview")
     }
 }
 
@@ -41,14 +52,15 @@ class ViewController: NSViewController {
         self.view.addSubview(self.containerView)
         
         let testView = TestView(frame: self.containerView.bounds)
-        testView.autoresizingMask = [.ViewWidthSizable, .ViewHeightSizable]
+        testView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         testView.backgroundColor = NSColor.redColor()
         self.containerView.presentView(testView)
         
         let blueView = Test2View(frame: CGRect(x: 10, y: 10, width: 44, height: 44))
         blueView.backgroundColor = NSColor.blueColor()
-        blueView.autoresizingMask = [.ViewMinYMargin, .ViewMaxXMargin]
+        blueView.autoresizingMask = [.FlexibleBottomMargin, .FlexibleRightMargin]
         testView.addSubview(blueView)
+        
     }
 
     override func viewWillLayout() {
