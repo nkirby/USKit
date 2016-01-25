@@ -22,6 +22,10 @@
 		43D572461C51E10A006D080C /* UIView+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D572451C51E10A006D080C /* UIView+UIKit.swift */; };
 		43D572491C51E13E006D080C /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D572481C51E13E006D080C /* UIView+Layout.swift */; };
 		43D5724B1C51E757006D080C /* UIViewDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5724A1C51E757006D080C /* UIViewDataTypes.swift */; };
+		43D572511C55CA61006D080C /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D572501C55CA61006D080C /* UIControl.swift */; };
+		43D572541C55CA86006D080C /* UIControlConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D572531C55CA86006D080C /* UIControlConstants.swift */; };
+		43D572561C55D886006D080C /* USControlAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D572551C55D886006D080C /* USControlAction.swift */; };
+		43D572581C55D89B006D080C /* USTargetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D572571C55D89B006D080C /* USTargetAction.swift */; };
 		43EC1F8F1C4D51B400C3BDD6 /* USKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 43EC1F8E1C4D51B400C3BDD6 /* USKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43EC1F961C4D51B400C3BDD6 /* USKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC1F8B1C4D51B400C3BDD6 /* USKit.framework */; };
 		43EC1FC01C4D539500C3BDD6 /* USImageManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FBF1C4D539500C3BDD6 /* USImageManipulation.swift */; };
@@ -74,6 +78,10 @@
 		43D572451C51E10A006D080C /* UIView+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+UIKit.swift"; path = "lib/_compat/UIView+UIKit.swift"; sourceTree = "<group>"; };
 		43D572481C51E13E006D080C /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Layout.swift"; path = "lib/View/UIView+Layout.swift"; sourceTree = "<group>"; };
 		43D5724A1C51E757006D080C /* UIViewDataTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewDataTypes.swift; path = lib/View/UIViewDataTypes.swift; sourceTree = "<group>"; };
+		43D572501C55CA61006D080C /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIControl.swift; path = lib/Control/UIControl.swift; sourceTree = "<group>"; };
+		43D572531C55CA86006D080C /* UIControlConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIControlConstants.swift; path = lib/Control/UIControlConstants.swift; sourceTree = "<group>"; };
+		43D572551C55D886006D080C /* USControlAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USControlAction.swift; path = lib/_core/USControlAction.swift; sourceTree = "<group>"; };
+		43D572571C55D89B006D080C /* USTargetAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USTargetAction.swift; path = lib/_core/USTargetAction.swift; sourceTree = "<group>"; };
 		43EC1F8B1C4D51B400C3BDD6 /* USKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = USKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43EC1F8E1C4D51B400C3BDD6 /* USKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USKit.h; sourceTree = "<group>"; };
 		43EC1F901C4D51B400C3BDD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -168,6 +176,15 @@
 			name = _compat;
 			sourceTree = "<group>";
 		};
+		43D572521C55CA66006D080C /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				43D572501C55CA61006D080C /* UIControl.swift */,
+				43D572531C55CA86006D080C /* UIControlConstants.swift */,
+			);
+			name = Control;
+			sourceTree = "<group>";
+		};
 		43EC1F811C4D51B400C3BDD6 = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +237,7 @@
 				43D572471C51E10D006D080C /* _compat */,
 				43EC1FF21C4DDF4E00C3BDD6 /* _core */,
 				43EC1FE91C4DAA6500C3BDD6 /* Application */,
+				43D572521C55CA66006D080C /* Control */,
 				43917A431C50504700940D5D /* Events */,
 				43EC1FC71C4D55FD00C3BDD6 /* Device */,
 				43EC1FDA1C4D6EE900C3BDD6 /* Extensions */,
@@ -295,6 +313,8 @@
 				43EC1FF31C4DDF5F00C3BDD6 /* USDispatch.swift */,
 				43EC1FEE1C4DDF4500C3BDD6 /* USApplication.swift */,
 				43917A461C50532F00940D5D /* USContainerView.swift */,
+				43D572551C55D886006D080C /* USControlAction.swift */,
+				43D572571C55D89B006D080C /* USTargetAction.swift */,
 			);
 			name = _core;
 			sourceTree = "<group>";
@@ -408,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43917A4F1C50792900940D5D /* UIView.swift in Sources */,
+				43D572511C55CA61006D080C /* UIControl.swift in Sources */,
 				43EC1FF61C4DDFA600C3BDD6 /* UIApplication+State.swift in Sources */,
 				43EC1FC41C4D549A00C3BDD6 /* UIImage.swift in Sources */,
 				43EC1FCD1C4D5CED00C3BDD6 /* UIDeviceConstants.swift in Sources */,
@@ -417,15 +438,18 @@
 				43917A541C5079A800940D5D /* UIEvent.swift in Sources */,
 				435A476D1C4DFB2E0080EC70 /* UIScreenOverscanCompensation.swift in Sources */,
 				43EC1FC01C4D539500C3BDD6 /* USImageManipulation.swift in Sources */,
+				43D572561C55D886006D080C /* USControlAction.swift in Sources */,
 				435A47641C4DE1660080EC70 /* UIUserInterfaceLayoutDirection.swift in Sources */,
 				43EC1FF41C4DDF5F00C3BDD6 /* USDispatch.swift in Sources */,
 				435A47681C4DF47C0080EC70 /* UIApplication+Windows.swift in Sources */,
 				43EC1FC61C4D55F500C3BDD6 /* UIIInterfaceOrientation.swift in Sources */,
 				43EC1FD71C4D6DB300C3BDD6 /* UIOffset.swift in Sources */,
+				43D572581C55D89B006D080C /* USTargetAction.swift in Sources */,
 				435A47661C4DE25E0080EC70 /* UIApplicationDelegate.swift in Sources */,
 				43EC1FE41C4DA3EF00C3BDD6 /* UIFloatRange.swift in Sources */,
 				43EC1FC91C4D56C300C3BDD6 /* UIInterfaceIdiom.swift in Sources */,
 				43EC1FD41C4D6C3500C3BDD6 /* UIEdgeInsets.swift in Sources */,
+				43D572541C55CA86006D080C /* UIControlConstants.swift in Sources */,
 				43D5724B1C51E757006D080C /* UIViewDataTypes.swift in Sources */,
 				43EC1FD91C4D6EE500C3BDD6 /* NSString+StringConversions.swift in Sources */,
 				435A476A1C4DF6DC0080EC70 /* UIScreen.swift in Sources */,

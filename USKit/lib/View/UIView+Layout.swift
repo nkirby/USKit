@@ -14,6 +14,12 @@ extension UIView {
     public func sizeToFit() {
         USUnimplemented()
     }
+    
+    public func setNeedsLayout() {
+    }
+    
+    public func setNeedsDisplay() {
+    }
 }
     
 #endif

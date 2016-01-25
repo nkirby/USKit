@@ -19,10 +19,10 @@ public func USLog(string: String) {
 // =======================================================
 
 extension CGRect {
-    public var integral: CGRect {
+    internal var integral: CGRect {
         return CGRectIntegral(self)
     }
-    public func flippedWithin(parentFrame: CGRect) -> CGRect {
+    internal func flippedWithin(parentFrame: CGRect) -> CGRect {
         return CGRect(x: self.origin.x, y: (parentFrame.size.height - self.origin.y) - self.size.height, width: self.size.width, height: self.size.height)
     }
     internal func centerPoint() -> CGPoint {

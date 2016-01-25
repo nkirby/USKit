@@ -27,18 +27,19 @@ class TestView: UIView {
     }
 }
 
-class Test2View: UIView {
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        self.frame = CGRectOffset(self.frame, 10.0, 10.0)
-    }
-    
-    override func willMoveToSuperview(newSuperview: UIView) {
-        USLog("willMoveToSuperview")
-    }
-    
-    override func didMoveToSuperview() {
-        USLog("didMoveToSuperview")
-    }
+class Test2View: UIControl {
+//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        
+//        self.frame = CGRectOffset(self.frame, 10.0, 10.0)
+//    }
+//    
+//    override func willMoveToSuperview(newSuperview: UIView) {
+//        USLog("willMoveToSuperview")
+//    }
+//    
+//    override func didMoveToSuperview() {
+//        USLog("didMoveToSuperview")
+//    }
 }
 
 class ViewController: NSViewController {
@@ -47,7 +48,8 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.containerView.frame = self.view.bounds
+        let containerViewFrame = CGRect(x: 44, y: 0, width: self.view.frame.size.width - 44.0, height: self.view.frame.size.height)
+        self.containerView.frame = containerViewFrame //self.view.bounds
         self.containerView.autoresizingMask = [.ViewWidthSizable, .ViewHeightSizable]
         self.view.addSubview(self.containerView)
         
@@ -61,11 +63,18 @@ class ViewController: NSViewController {
         blueView.autoresizingMask = [.FlexibleBottomMargin, .FlexibleRightMargin]
         testView.addSubview(blueView)
         
+        blueView.addTarget(self, action: "didTap:", forControlEvents: .TouchDown)
     }
 
     override func viewWillLayout() {
         super.viewWillLayout()
-        self.containerView.frame = self.view.bounds
+        
+        let containerViewFrame = CGRect(x: 44, y: 0, width: self.view.frame.size.width - 44.0, height: self.view.frame.size.height)
+        self.containerView.frame = containerViewFrame
+    }
+    
+    @objc private func didTap(sender: AnyObject?) {
+        print("did tap!!!!!")
     }
 }
 
