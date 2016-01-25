@@ -26,6 +26,9 @@
 		43D572541C55CA86006D080C /* UIControlConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D572531C55CA86006D080C /* UIControlConstants.swift */; };
 		43D572561C55D886006D080C /* USControlAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D572551C55D886006D080C /* USControlAction.swift */; };
 		43D572581C55D89B006D080C /* USTargetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D572571C55D89B006D080C /* USTargetAction.swift */; };
+		43D5725A1C55E89F006D080C /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D572591C55E89F006D080C /* UIView+AutoLayout.swift */; };
+		43D5725C1C55E95A006D080C /* UIView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5725B1C55E95A006D080C /* UIView+Helpers.swift */; };
+		43D5725E1C55E9B4006D080C /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5725D1C55E9B4006D080C /* UIView+Animation.swift */; };
 		43EC1F8F1C4D51B400C3BDD6 /* USKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 43EC1F8E1C4D51B400C3BDD6 /* USKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43EC1F961C4D51B400C3BDD6 /* USKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC1F8B1C4D51B400C3BDD6 /* USKit.framework */; };
 		43EC1FC01C4D539500C3BDD6 /* USImageManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1FBF1C4D539500C3BDD6 /* USImageManipulation.swift */; };
@@ -82,6 +85,9 @@
 		43D572531C55CA86006D080C /* UIControlConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIControlConstants.swift; path = lib/Control/UIControlConstants.swift; sourceTree = "<group>"; };
 		43D572551C55D886006D080C /* USControlAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USControlAction.swift; path = lib/_core/USControlAction.swift; sourceTree = "<group>"; };
 		43D572571C55D89B006D080C /* USTargetAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USTargetAction.swift; path = lib/_core/USTargetAction.swift; sourceTree = "<group>"; };
+		43D572591C55E89F006D080C /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+AutoLayout.swift"; path = "lib/View/UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		43D5725B1C55E95A006D080C /* UIView+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Helpers.swift"; path = "lib/View/UIView+Helpers.swift"; sourceTree = "<group>"; };
+		43D5725D1C55E9B4006D080C /* UIView+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Animation.swift"; path = "lib/View/UIView+Animation.swift"; sourceTree = "<group>"; };
 		43EC1F8B1C4D51B400C3BDD6 /* USKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = USKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43EC1F8E1C4D51B400C3BDD6 /* USKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USKit.h; sourceTree = "<group>"; };
 		43EC1F901C4D51B400C3BDD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -153,6 +159,9 @@
 			isa = PBXGroup;
 			children = (
 				43917A4E1C50792900940D5D /* UIView.swift */,
+				43D5725D1C55E9B4006D080C /* UIView+Animation.swift */,
+				43D572591C55E89F006D080C /* UIView+AutoLayout.swift */,
+				43D5725B1C55E95A006D080C /* UIView+Helpers.swift */,
 				43D572481C51E13E006D080C /* UIView+Layout.swift */,
 				43D572411C51DFD4006D080C /* UIView+Subviews.swift */,
 				43D5724A1C51E757006D080C /* UIViewDataTypes.swift */,
@@ -436,6 +445,7 @@
 				43EC1FCB1C4D5A2F00C3BDD6 /* UIDevice.swift in Sources */,
 				43EC1FE01C4D9EEA00C3BDD6 /* UIRectEdge.swift in Sources */,
 				43917A541C5079A800940D5D /* UIEvent.swift in Sources */,
+				43D5725E1C55E9B4006D080C /* UIView+Animation.swift in Sources */,
 				435A476D1C4DFB2E0080EC70 /* UIScreenOverscanCompensation.swift in Sources */,
 				43EC1FC01C4D539500C3BDD6 /* USImageManipulation.swift in Sources */,
 				43D572561C55D886006D080C /* USControlAction.swift in Sources */,
@@ -451,6 +461,7 @@
 				43EC1FD41C4D6C3500C3BDD6 /* UIEdgeInsets.swift in Sources */,
 				43D572541C55CA86006D080C /* UIControlConstants.swift in Sources */,
 				43D5724B1C51E757006D080C /* UIViewDataTypes.swift in Sources */,
+				43D5725C1C55E95A006D080C /* UIView+Helpers.swift in Sources */,
 				43EC1FD91C4D6EE500C3BDD6 /* NSString+StringConversions.swift in Sources */,
 				435A476A1C4DF6DC0080EC70 /* UIScreen.swift in Sources */,
 				43EC1FF71C4DE11300C3BDD6 /* UIApplication.swift in Sources */,
@@ -458,6 +469,7 @@
 				43D572421C51DFD4006D080C /* UIView+Subviews.swift in Sources */,
 				43EC1FE21C4DA31E00C3BDD6 /* NSDictionary+UIKit.swift in Sources */,
 				43917A561C507A2100940D5D /* UITouch.swift in Sources */,
+				43D5725A1C55E89F006D080C /* UIView+AutoLayout.swift in Sources */,
 				43EC1FCF1C4D5DAC00C3BDD6 /* UIDeviceBatteryState.swift in Sources */,
 				43EC1FF11C4DDF4500C3BDD6 /* USKitCore.swift in Sources */,
 				43D5723F1C51855F006D080C /* UIViewAutoresizing.swift in Sources */,

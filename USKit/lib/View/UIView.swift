@@ -7,13 +7,67 @@
 import Cocoa
   
 public typealias UIColor = NSColor
+public typealias UILayoutGuide = NSObject
+public typealias UILayoutPriority = NSObject
+public typealias UILayoutConstraintAxis = NSObject
+public typealias UISemanticContentAttribute = NSObject
+public typealias UIViewPrintFormatter = NSObject
+public typealias UIViewAnimationOptions = NSObject
+public typealias UIViewKeyframeAnimationOptions = NSObject
+public typealias UISystemAnimation = NSObject
+public typealias UIViewAnimationCurve = NSObject
+public typealias UIViewAnimationTransition = NSObject
+public typealias UIMotionEffect = NSObject
     
 public class UIView: NSResponder {
     private(set) public var backingView: NSView!
     public var shouldSendTouchEventsAsMouseEvents = true
     
+    public var tag = 0
+
 // =======================================================
-// MARK: - Layout
+// MARK: - Appearance
+
+    public var backgroundColor: UIColor? {
+        didSet {
+            self.backingView.layer?.backgroundColor = self.backgroundColor?.CGColor
+        }
+    }
+
+    public var hidden: Bool {
+        get { return self.backingView.hidden }
+        set { self.backingView.hidden = newValue }
+    }
+
+    public var alpha: CGFloat {
+        get { return self.backingView.alphaValue }
+        set { self.backingView.alphaValue = newValue }
+    }
+
+    public var opaque: Bool {
+        USUnimplemented()
+    }
+
+    public var tintColor = UIColor.whiteColor()
+    public var tintAdjustmentMode = UIViewTintAdjustmentMode.Normal
+
+    public var clipsToBounds: Bool {
+        get { return self.backingView.layer?.masksToBounds ?? false }
+        set { self.backingView.layer?.masksToBounds = newValue }
+    }
+    
+    public var clearsContextBeforeDrawing = true
+    public var maskView: UIView?
+
+// =======================================================
+// MARK: - Event-Related Behavior
+    
+    public var userInteractionEnabled: Bool = true
+    public var multipleTouchEnabled: Bool = true
+    public var exclusiveTouch: Bool = false
+
+// =======================================================
+// MARK: - Frames
     
     public var bounds: CGRect {
         get { return self.backingView.bounds }
@@ -28,11 +82,26 @@ public class UIView: NSResponder {
             self.backingView.frame = self.frame.flippedWithin(parentView.bounds)
         }
     }
-
+    
     public var center: CGPoint {
         get { return self.frame.centerPoint() }
         set { self.frame = self.frame.centeredOn(point: newValue) }
     }
+
+    public var transform: CGAffineTransform = CGAffineTransformIdentity
+    public var layoutMargins: UIEdgeInsets = UIEdgeInsets.zero
+    public var preservesSuperviewLayoutMargins = false
+
+// =======================================================
+// MARK: - Hierarchy 
+    
+    internal(set) public var superview: UIView?
+    internal(set) public var subviews = [UIView]()
+    internal(set) public var window: UIWindow?
+    internal(set) public var gestureRecognizers: [UIGestureRecognizer]? = nil
+
+// =======================================================
+// MARK: - Resizing Behavior
     
     public var autoresizingMask: UIViewAutoresizing {
         get { return UIViewAutoresizing(maskOptions: self.backingView.autoresizingMask) }
@@ -45,62 +114,29 @@ public class UIView: NSResponder {
     }
     
     public var contentMode: UIViewContentMode = .ScaleToFill
+
+    @available(*, unavailable)
+    public var contentStretch = CGRect.zero
     
 // =======================================================
-// MARK: - Style
+// MARK: - State Restoration
     
-    public var hidden: Bool {
-        get { return self.backingView.hidden }
-        set { self.backingView.hidden = newValue }
-    }
-    
-    public var alpha: CGFloat {
-        get { return self.backingView.alphaValue }
-        set { self.backingView.alphaValue = newValue }
-    }
-    
-    public var opaque: Bool {
-        USUnimplemented()
-    }
-    
-    public var tintColor = UIColor.whiteColor()
-    public var tintAdjustmentMode = UIViewTintAdjustmentMode.Normal
-    
-    public var backgroundColor: UIColor? {
-        didSet {
-            self.backingView.layer?.backgroundColor = self.backgroundColor?.CGColor
-        }
-    }
-
-    public var clipsToBounds: Bool {
-        get { return self.backingView.layer?.masksToBounds ?? false }
-        set { self.backingView.layer?.masksToBounds = newValue }
-    }
-    
-    public var clearsContextBeforeDrawing: Bool = true
-    public var maskView: UIView?
+    public var restorationIdentifier: String? = nil
 
 // =======================================================
-// MARK: - Event-Related Behavior
-    
-    public var userInteractionEnabled: Bool = true
-    public var multipleTouchEnabled: Bool = true
-    public var exclusiveTouch: Bool = false
-    
-// =======================================================
-// MARK: - Ownership
-    
-    internal(set) public var window: UIWindow?
-    internal(set) public var superview: UIView?
-    internal(set) public var subviews = [UIView]()
-    
-    public class func layerClass() -> AnyClass {
-        return CALayer.self
-    }
+// MARK: - Misc
     
     public var layer: CALayer? {
         get { return self.backingView.layer }
     }
+
+    public var translatesAutoresizingMaskIntoConstraints = false
+    public var contentScaleFactor: CGFloat = 1.0
+    public var semanticContentAttribute: UISemanticContentAttribute {
+        USUnimplemented()
+    }
+    
+    public var focused = false
 
 // =======================================================
 // MARK: - Init, etc...
@@ -134,6 +170,13 @@ public class UIView: NSResponder {
     }
 
 // =======================================================
+// MARK: - Layer
+    
+    public class func layerClass() -> AnyClass {
+        return CALayer.self
+    }
+    
+// =======================================================
 // MARK: - KVO
     
     public override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
@@ -154,7 +197,7 @@ public class UIView: NSResponder {
             break
         }
     }
-        
+    
 // =======================================================
 // MARK: - UIResponding
     

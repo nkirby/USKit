@@ -39,7 +39,19 @@ extension UIView {
             self.didAddSubview(view)
         }
     }
-
+    
+    public func bringSubviewToFront(subview: UIView) {
+        USUnimplemented()
+    }
+    
+    public func sendSubviewToBack(subview: UIView) {
+        USUnimplemented()
+    }
+    
+    public func removeFromSuperview() {
+        USUnimplemented()
+    }
+    
     public func insertSubview(subview: UIView, atIndex index: Int) {
         USUnimplemented()
     }
@@ -61,24 +73,40 @@ extension UIView {
     }
     
 // =======================================================
-// MARK: - View Related Changes
+// MARK: - View Identification
     
-    public func didAddSubview(subview: UIView) {
+    public func viewWithTag(tag: Int) -> UIView? {
+        USUnimplemented()
     }
     
-    public func willRemoveSubview(subview: UIView) {
+// =======================================================
+// MARK: - Converting Points
+    
+    public func convertPoint(point: CGPoint, toView view: UIView?) -> CGPoint {
+        USUnimplemented()
     }
     
-    public func willMoveToSuperview(newSuperview: UIView) {
+    public func convertPoint(point: CGPoint, fromView view: UIView?) -> CGPoint {
+        USUnimplemented()
     }
     
-    public func didMoveToSuperview() {
+    public func convertRect(rect: CGRect, toView view: UIView?) -> CGRect {
+        USUnimplemented()
     }
     
-    public func willMoveToWindow(window: UIWindow?) {
+    public func convertRect(rect: CGRect, fromView view: UIView?) -> CGRect {
+        USUnimplemented()
+    }
+
+// =======================================================
+// MARK: - Hit Tests
+    
+    public func hitTest(point: CGPoint, withEvent event: UIEvent?) -> UIView? {
+        USUnimplemented()
     }
     
-    public func didMoveToWindow() {
+    public func pointInside(point: CGPoint, withEvent event: UIEvent?) -> Bool {
+        USUnimplemented()
     }
 }
     
