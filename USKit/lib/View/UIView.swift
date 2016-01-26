@@ -19,12 +19,16 @@ public typealias UIViewAnimationCurve = NSObject
 public typealias UIViewAnimationTransition = NSObject
 public typealias UIMotionEffect = NSObject
     
-internal class USFlippedNSView: NSView {
+// =======================================================
+
+internal class USInternalNSView: NSView {
     override var flipped: Bool {
         get { return true }
     }
 }
     
+// =======================================================
+
 public class UIView: NSResponder {
     private(set) public var backingView: NSView!
     public var shouldSendTouchEventsAsMouseEvents = true
@@ -77,6 +81,7 @@ public class UIView: NSResponder {
     
     public var bounds: CGRect {
         get { return self.backingView.bounds }
+        set { self.backingView.bounds = newValue }
     }
     
     public var frame: CGRect {
@@ -150,7 +155,6 @@ public class UIView: NSResponder {
         super.init()
         
         self.setupView(frame: frame)
-//        self.frame = frame
     }
     
     public required init?(coder: NSCoder) {
@@ -159,10 +163,6 @@ public class UIView: NSResponder {
     
     deinit {
         self.backingView.removeObserver(self, forKeyPath: "nextResponder")
-    }
-    
-    public override var acceptsFirstResponder: Bool {
-        return true
     }
     
     private func setupView(frame frame: CGRect) {
@@ -174,7 +174,7 @@ public class UIView: NSResponder {
     }
 
     public func generateBackingView(frame frame: CGRect) -> NSView {
-        return USFlippedNSView(frame: frame)
+        return USInternalNSView(frame: frame)
     }
     
 // =======================================================
@@ -183,7 +183,14 @@ public class UIView: NSResponder {
     public class func layerClass() -> AnyClass {
         return CALayer.self
     }
+
+// =======================================================
+// MARK: - Responder
     
+    public override var acceptsFirstResponder: Bool {
+        return true
+    }
+
 // =======================================================
 // MARK: - KVO
     
