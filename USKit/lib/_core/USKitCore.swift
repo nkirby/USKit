@@ -11,3 +11,24 @@ import Foundation
 @noreturn public func USUnimplemented(fn: String = __FUNCTION__, file: StaticString = __FILE__, line: UInt = __LINE__) {
     fatalError("\(fn) is not yet implemented", file: file, line: line)
 }
+
+public func USLog(string: String) {
+    NSLog(string)
+}
+
+// =======================================================
+
+extension CGRect {
+    internal var integral: CGRect {
+        return CGRectIntegral(self)
+    }
+    internal func flippedWithin(parentFrame: CGRect) -> CGRect {
+        return CGRect(x: self.origin.x, y: (parentFrame.size.height - self.origin.y) - self.size.height, width: self.size.width, height: self.size.height)
+    }
+    internal func centerPoint() -> CGPoint {
+        return CGPoint(x: CGRectGetMidX(self), y: CGRectGetMidY(self))
+    }
+    internal func centeredOn(point point: CGPoint) -> CGRect {
+        return CGRect(x: point.x - (self.width / 2), y: point.y - (self.height / 2), width: point.x + (self.width / 2), height: point.y + (self.width / 2)).integral
+    }
+}

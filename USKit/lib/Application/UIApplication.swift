@@ -9,7 +9,6 @@ import Cocoa
     // Temp
     public typealias UIUserNotificationSettings = NSObject
     public typealias UIWindow = NSWindow
-    public typealias UIEvent = NSEvent
     public typealias UILocalNotification = NSObject
     public typealias UIBackgroundTaskIdentifier = NSObject
     public typealias UIApplicationShortcutItem = NSObject
@@ -110,7 +109,7 @@ public class UIApplication: NSObject {
 // MARK: - Events
     
     public func sendEvent(event: UIEvent) {
-        NSApplication.sharedApplication().sendEvent(event)
+        NSApplication.sharedApplication().sendEvent(event.pointerEvent)
     }
     
     public func sendAction(action: Selector, to target: AnyObject?, from sender: AnyObject?, forEvent event: UIEvent?) -> Bool {
