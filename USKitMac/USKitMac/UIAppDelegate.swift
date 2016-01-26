@@ -21,19 +21,19 @@ class UIAppDelegate: NSObject, UIApplicationDelegate {
     }
     
     func applicationWillEnterForeground(application: UIApplication) {
-        NSLog("Will enter foreground")
+//        NSLog("Will enter foreground")
     }
     
     func applicationDidBecomeActive(application: UIApplication) {
-        NSLog("Did enter foreground")
+//        NSLog("Did enter foreground")
     }
     
     func applicationWillResignActive(application: UIApplication) {
-        NSLog("Will enter background")
+//        NSLog("Will enter background")
     }
     
     func applicationDidEnterBackground(application: UIApplication) {
-        NSLog("Did enter background")
+//        NSLog("Did enter background")
     }
     
     func applicationWillTerminate(application: UIApplication) {

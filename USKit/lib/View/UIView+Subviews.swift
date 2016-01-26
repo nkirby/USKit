@@ -69,24 +69,113 @@ extension UIView {
     }
     
     public func isDescendantOfView(view: UIView) -> Bool {
-        USUnimplemented()
+        return self.backingView.isDescendantOf(view.backingView)
     }
     
 // =======================================================
 // MARK: - View Identification
     
     public func viewWithTag(tag: Int) -> UIView? {
-        USUnimplemented()
+        if self.tag == tag {
+            return self
+        }
+        
+        for subview in self.subviews {
+            if subview.tag == tag {
+                return subview
+            }
+        }
+        
+        return nil
     }
     
 // =======================================================
 // MARK: - Converting Points
     
+/*
+A nasty sideffect of the CGRect frame/bounds trickery we're doing is that dropping to the
+backingView's convertPoint: methods won't work, as the backingView's frame is the actual bottom-left
+origin coordinate system, whereas UIView, et al, are expecting the top-left origin coordinate system. 
+
+This means we have to calculate the difference ourselves. The result, below, isn't pretty. It needs
+testing and refactoring.
+*/
+    
     public func convertPoint(point: CGPoint, toView view: UIView?) -> CGPoint {
-        USUnimplemented()
+        if self == view {
+            return point
+        }
+        
+        if let otherView = view {
+            if self.isDescendantOfView(otherView) {
+                var offset = point
+                if otherView.subviews.contains(self) {
+                    offset.x = point.x + self.frame.origin.x
+                    offset.y = point.y + self.frame.origin.y
+                    return offset
+                } else {
+                    for subview in otherView.subviews {
+                        if self.isDescendantOfView(subview) {
+                            return subview.convertPoint(point, toView: otherView)
+                        }
+                    }
+                }
+            } else {
+                var offset = point
+                if self.subviews.contains(otherView) {
+                    offset.x = point.x - otherView.frame.origin.x
+                    offset.y = point.x - otherView.frame.origin.y
+                    return offset
+                } else {
+                    for subview in self.subviews {
+                        if otherView.isDescendantOfView(subview) {
+                            return subview.convertPoint(point, toView: otherView)
+                        }
+                    }
+                }
+            }
+        }
+        
+        // TODO: Implement UIWindow fallback
+        return CGPoint.zero
     }
     
     public func convertPoint(point: CGPoint, fromView view: UIView?) -> CGPoint {
+        if self == view {
+            return point
+        }
+
+        if let otherView = view {
+            if self.isDescendantOfView(otherView) {
+                var offset = point
+                if otherView.subviews.contains(self) {
+                    offset.x = point.x - self.frame.origin.x
+                    offset.y = point.y - self.frame.origin.y
+                    return offset
+                } else {
+                    for subview in otherView.subviews {
+                        if self.isDescendantOfView(subview) {
+                            return subview.convertPoint(point, fromView: otherView)
+                        }
+                    }
+                }
+            } else {
+                var offset = point
+                if self.subviews.contains(otherView) {
+                    offset.x = point.x + otherView.frame.origin.x
+                    offset.y = point.x + otherView.frame.origin.y
+                    return offset
+                } else {
+                    for subview in self.subviews {
+                        if otherView.isDescendantOfView(subview) {
+                            return subview.convertPoint(point, fromView: otherView)
+                        }
+                    }
+                }
+            }
+        }
+        
+        // TODO: Implement UIWindow fallback
         USUnimplemented()
     }
     

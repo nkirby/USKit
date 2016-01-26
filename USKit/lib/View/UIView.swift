@@ -159,6 +159,10 @@ public class UIView: NSResponder {
         super.init(coder: coder)
     }
     
+    deinit {
+        self.backingView.removeObserver(self, forKeyPath: "nextResponder")
+    }
+    
     public override var acceptsFirstResponder: Bool {
         return true
     }
