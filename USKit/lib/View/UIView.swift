@@ -19,6 +19,12 @@ public typealias UIViewAnimationCurve = NSObject
 public typealias UIViewAnimationTransition = NSObject
 public typealias UIMotionEffect = NSObject
     
+internal class USFlippedNSView: NSView {
+    override var flipped: Bool {
+        get { return true }
+    }
+}
+    
 public class UIView: NSResponder {
     private(set) public var backingView: NSView!
     public var shouldSendTouchEventsAsMouseEvents = true
@@ -73,14 +79,9 @@ public class UIView: NSResponder {
         get { return self.backingView.bounds }
     }
     
-    public var frame = CGRect.zero {
-        didSet {
-            guard let parentView = self.backingView?.superview else {
-                return
-            }
-            
-            self.backingView.frame = self.frame.flippedWithin(parentView.bounds)
-        }
+    public var frame: CGRect {
+        get { return self.backingView.frame }
+        set { self.backingView.frame = newValue }
     }
     
     public var center: CGPoint {
@@ -148,9 +149,8 @@ public class UIView: NSResponder {
     public init(frame: CGRect) {
         super.init()
         
-        self.frame = frame
-
         self.setupView(frame: frame)
+//        self.frame = frame
     }
     
     public required init?(coder: NSCoder) {
@@ -174,7 +174,7 @@ public class UIView: NSResponder {
     }
 
     public func generateBackingView(frame frame: CGRect) -> NSView {
-        return NSView(frame: frame)
+        return USFlippedNSView(frame: frame)
     }
     
 // =======================================================
