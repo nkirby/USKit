@@ -149,10 +149,8 @@ public class UIView: NSResponder {
         super.init()
         
         self.frame = frame
-        self.setupView()
-        self.backingView.frame = frame
-        
-        self.backingView.addObserver(self, forKeyPath: "nextResponder", options: NSKeyValueObservingOptions.New, context: nil)
+
+        self.setupView(frame: frame)
     }
     
     public required init?(coder: NSCoder) {
@@ -167,12 +165,18 @@ public class UIView: NSResponder {
         return true
     }
     
-    private func setupView() {
-        let view = NSView(frame: CGRect.zero)
+    private func setupView(frame frame: CGRect) {
+        let view = self.generateBackingView(frame: frame)
         view.wantsLayer = true
+        view.addObserver(self, forKeyPath: "nextResponder", options: NSKeyValueObservingOptions.New, context: nil)
+
         self.backingView = view
     }
 
+    public func generateBackingView(frame frame: CGRect) -> NSView {
+        return NSView(frame: frame)
+    }
+    
 // =======================================================
 // MARK: - Layer
     
