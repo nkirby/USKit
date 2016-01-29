@@ -30,15 +30,31 @@ extension UIView {
 // MARK: - Gesture Recogniers
     
     public func addGestureRecognizer(gestureRecognizer: UIGestureRecognizer) {
-        USUnimplemented()
+        guard let gestureRecognizers = self.gestureRecognizers else {
+            return
+        }
+        
+        if gestureRecognizers.contains(gestureRecognizer) {
+            return
+        }
+        
+        if let view = gestureRecognizer.view {
+            view.removeGestureRecognizer(gestureRecognizer)
+        }
+        
+        self.gestureRecognizers?.append(gestureRecognizer)
+        gestureRecognizer.view = self
     }
     
     public func removeGestureRecognizer(gestureRecognizer: UIGestureRecognizer) {
-        USUnimplemented()
+        if let idx = self.gestureRecognizers?.indexOf(gestureRecognizer) {
+            self.gestureRecognizers?.removeAtIndex(idx)
+            gestureRecognizer.view = nil
+        }
     }
     
     public func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
-        USUnimplemented()
+        return true
     }
     
 // =======================================================

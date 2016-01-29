@@ -26,7 +26,12 @@ import Cocoa
 
 public class UIGestureRecognizer: NSObject {
     internal(set) public var state: UIGestureRecognizerState = .Possible
-    internal(set) public var view: UIView? = nil
+    internal(set) public var view: UIView? = nil {
+        didSet {
+            self.reset()
+        }
+    }
+    
     public var enabled = true
     
     public var cancelsTouchesInView = true

@@ -180,12 +180,12 @@
 		43C144621C5B01E1002C23EA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				43C144681C5B01E1002C23EA /* UIView.swift */,
 				43C144631C5B01E1002C23EA /* UIView+Animation.swift */,
 				43C144641C5B01E1002C23EA /* UIView+AutoLayout.swift */,
 				43C144651C5B01E1002C23EA /* UIView+Helpers.swift */,
 				43C144661C5B01E1002C23EA /* UIView+Layout.swift */,
 				43C144671C5B01E1002C23EA /* UIView+Subviews.swift */,
-				43C144681C5B01E1002C23EA /* UIView.swift */,
 				43C144691C5B01E1002C23EA /* UIViewDataTypes.swift */,
 			);
 			path = View;

@@ -34,7 +34,7 @@ public class UIView: NSResponder {
     public var shouldSendTouchEventsAsMouseEvents = true
     
     public var tag = 0
-
+    
 // =======================================================
 // MARK: - Appearance
 
@@ -155,6 +155,7 @@ public class UIView: NSResponder {
         super.init()
         
         self.setupView(frame: frame)
+        self.gestureRecognizers = []
     }
     
     public required init?(coder: NSCoder) {
