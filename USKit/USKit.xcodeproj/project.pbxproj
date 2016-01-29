@@ -29,6 +29,7 @@
 		43C144741C5B0200002C23EA /* UIGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C144731C5B0200002C23EA /* UIGestureRecognizer.swift */; };
 		43C1447E1C5B1201002C23EA /* USKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1447D1C5B1201002C23EA /* USKit.swift */; };
 		43C144801C5B1A57002C23EA /* USAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1447F1C5B1A57002C23EA /* USAnimator.swift */; };
+		43C144821C5C2912002C23EA /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C144811C5C2912002C23EA /* UINavigationItem.swift */; };
 		43D5723F1C51855F006D080C /* UIViewAutoresizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5723E1C51855F006D080C /* UIViewAutoresizing.swift */; };
 		43D572461C51E10A006D080C /* UIView+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D572451C51E10A006D080C /* UIView+UIKit.swift */; };
 		43D572561C55D886006D080C /* USControlAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D572551C55D886006D080C /* USControlAction.swift */; };
@@ -92,6 +93,7 @@
 		43C144731C5B0200002C23EA /* UIGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIGestureRecognizer.swift; path = Gestures/UIGestureRecognizer.swift; sourceTree = "<group>"; };
 		43C1447D1C5B1201002C23EA /* USKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USKit.swift; path = lib/_core/USKit.swift; sourceTree = "<group>"; };
 		43C1447F1C5B1A57002C23EA /* USAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USAnimator.swift; path = lib/_core/USAnimator.swift; sourceTree = "<group>"; };
+		43C144811C5C2912002C23EA /* UINavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UINavigationItem.swift; path = "lib/View Controllers/Navigation/UINavigationItem.swift"; sourceTree = "<group>"; };
 		43D5723E1C51855F006D080C /* UIViewAutoresizing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewAutoresizing.swift; path = lib/Layout/UIViewAutoresizing.swift; sourceTree = "<group>"; };
 		43D572451C51E10A006D080C /* UIView+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+UIKit.swift"; path = "lib/_compat/UIView+UIKit.swift"; sourceTree = "<group>"; };
 		43D572551C55D886006D080C /* USControlAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USControlAction.swift; path = lib/_core/USControlAction.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		431A753E1C5BC53A009242A3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				43C144831C5C2917002C23EA /* Navigation */,
 				431A753C1C5BC52E009242A3 /* UIViewController.swift */,
 			);
 			name = "View Controllers";
@@ -211,6 +214,14 @@
 				43C144731C5B0200002C23EA /* UIGestureRecognizer.swift */,
 			);
 			name = Gestures;
+			sourceTree = "<group>";
+		};
+		43C144831C5C2917002C23EA /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				43C144811C5C2912002C23EA /* UINavigationItem.swift */,
+			);
+			name = Navigation;
 			sourceTree = "<group>";
 		};
 		43D572401C518563006D080C /* Layout */ = {
@@ -518,6 +529,7 @@
 				43EC1FDE1C4D9D5000C3BDD6 /* NSIndexPath+UIKit.swift in Sources */,
 				43EC1FD11C4D623700C3BDD6 /* UIFont.swift in Sources */,
 				43C144701C5B01E1002C23EA /* UIView+Subviews.swift in Sources */,
+				43C144821C5C2912002C23EA /* UINavigationItem.swift in Sources */,
 				43EC1FDC1C4D6F8500C3BDD6 /* NSValue+UIKit.swift in Sources */,
 				43C1446B1C5B01E1002C23EA /* UIControlConstants.swift in Sources */,
 				43D572461C51E10A006D080C /* UIView+UIKit.swift in Sources */,

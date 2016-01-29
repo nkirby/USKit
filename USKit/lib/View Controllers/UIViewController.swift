@@ -22,7 +22,6 @@ import Cocoa
     public typealias UIPreviewActionItem = NSObject
     public typealias UIStatusBarStyle = NSObject
     public typealias UIStatusBarAnimation = NSObject
-    public typealias UINavigationItem = NSObject
     public typealias UIBarButtonItem = NSObject
     public typealias UITabBarItem = NSObject
     public typealias UIKeyCommand = NSObject
