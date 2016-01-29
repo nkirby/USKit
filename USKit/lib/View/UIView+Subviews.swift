@@ -26,9 +26,6 @@ extension UIView {
                 view.backingView.removeFromSuperview()
             }
             
-            // Adjust the frame
-//            view.backingView.frame = view.backingView.frame.flippedWithin(self.backingView.bounds)
-            
             // Insert the subview
             self.subviews.append(view)
             self.backingView.addSubview(view.backingView)
@@ -137,7 +134,7 @@ testing and refactoring.
         }
         
         // TODO: Implement UIWindow fallback
-        return CGPoint.zero
+        USUnimplemented()
     }
     
     public func convertPoint(point: CGPoint, fromView view: UIView?) -> CGPoint {
@@ -195,7 +192,7 @@ testing and refactoring.
     }
     
     public func pointInside(point: CGPoint, withEvent event: UIEvent?) -> Bool {
-        USUnimplemented()
+        return self.frame.contains(point)
     }
 }
     
