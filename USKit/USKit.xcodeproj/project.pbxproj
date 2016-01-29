@@ -26,6 +26,7 @@
 		43C144711C5B01E1002C23EA /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C144681C5B01E1002C23EA /* UIView.swift */; };
 		43C144721C5B01E1002C23EA /* UIViewDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C144691C5B01E1002C23EA /* UIViewDataTypes.swift */; };
 		43C144741C5B0200002C23EA /* UIGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C144731C5B0200002C23EA /* UIGestureRecognizer.swift */; };
+		43C1447E1C5B1201002C23EA /* USKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1447D1C5B1201002C23EA /* USKit.swift */; };
 		43D5723F1C51855F006D080C /* UIViewAutoresizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5723E1C51855F006D080C /* UIViewAutoresizing.swift */; };
 		43D572461C51E10A006D080C /* UIView+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D572451C51E10A006D080C /* UIView+UIKit.swift */; };
 		43D572561C55D886006D080C /* USControlAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D572551C55D886006D080C /* USControlAction.swift */; };
@@ -86,6 +87,7 @@
 		43C144681C5B01E1002C23EA /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		43C144691C5B01E1002C23EA /* UIViewDataTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewDataTypes.swift; sourceTree = "<group>"; };
 		43C144731C5B0200002C23EA /* UIGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIGestureRecognizer.swift; path = Gestures/UIGestureRecognizer.swift; sourceTree = "<group>"; };
+		43C1447D1C5B1201002C23EA /* USKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USKit.swift; path = lib/_core/USKit.swift; sourceTree = "<group>"; };
 		43D5723E1C51855F006D080C /* UIViewAutoresizing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewAutoresizing.swift; path = lib/Layout/UIViewAutoresizing.swift; sourceTree = "<group>"; };
 		43D572451C51E10A006D080C /* UIView+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+UIKit.swift"; path = "lib/_compat/UIView+UIKit.swift"; sourceTree = "<group>"; };
 		43D572551C55D886006D080C /* USControlAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USControlAction.swift; path = lib/_core/USControlAction.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				43EC1FEF1C4DDF4500C3BDD6 /* USKitCore.swift */,
+				43C1447D1C5B1201002C23EA /* USKit.swift */,
 				43EC1FF31C4DDF5F00C3BDD6 /* USDispatch.swift */,
 				43EC1FEE1C4DDF4500C3BDD6 /* USApplication.swift */,
 				43917A461C50532F00940D5D /* USContainerView.swift */,
@@ -478,6 +481,7 @@
 				43EC1FD71C4D6DB300C3BDD6 /* UIOffset.swift in Sources */,
 				43D572581C55D89B006D080C /* USTargetAction.swift in Sources */,
 				435A47661C4DE25E0080EC70 /* UIApplicationDelegate.swift in Sources */,
+				43C1447E1C5B1201002C23EA /* USKit.swift in Sources */,
 				43C1446A1C5B01E1002C23EA /* UIControl.swift in Sources */,
 				43EC1FE41C4DA3EF00C3BDD6 /* UIFloatRange.swift in Sources */,
 				43EC1FC91C4D56C300C3BDD6 /* UIInterfaceIdiom.swift in Sources */,
