@@ -14,6 +14,8 @@ public class USKit: NSObject {
     public class func sharedInstance() -> USKit {
         return self._shared
     }
+
+    public let animator = USAnimator()
     
     public func setupUIKitBridge() {
         #if os(OSX)

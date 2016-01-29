@@ -65,7 +65,7 @@ extension UIView {
     }
     
     public class func performWithoutAnimation(actionsWithoutAnimation: () -> Void) {
-        USUnimplemented()
+        actionsWithoutAnimation()
     }
 
 // =======================================================
@@ -83,9 +83,6 @@ extension UIView {
         USUnimplemented()
     }
     
-    public class func setAnimationsEnabled(enabled: Bool) {
-        USUnimplemented()
-    }
     
     public class func setAnimationDelegate(delegate: AnyObject?) {
         USUnimplemented()
@@ -126,9 +123,16 @@ extension UIView {
     public class func setAnimationTransition(transition: UIViewAnimationTransition, forView view: UIView, cache: Bool) {
         USUnimplemented()
     }
+
+// =======================================================
+// MARK: - 
     
+    public class func setAnimationsEnabled(enabled: Bool) {
+        USAnimator.sharedAnimator().animationsEnabled = enabled
+    }
+
     public class func areAnimationsEnabled() -> Bool {
-        USUnimplemented()
+        return USAnimator.sharedAnimator().animationsEnabled
     }
     
 // =======================================================
