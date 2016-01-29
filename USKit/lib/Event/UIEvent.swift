@@ -5,8 +5,6 @@
 
 #if os(OSX)
 import Cocoa
-
-public typealias UIGestureRecognizer = NSObject
     
 public enum UIEventType : Int {
     case Touches

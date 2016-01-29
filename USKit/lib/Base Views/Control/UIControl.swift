@@ -47,7 +47,7 @@ public class UIControl: UIView {
     
     public var highlighted = false {
         didSet {
-            if oldValue != self.selected {
+            if oldValue != self.highlighted {
                 self.notifyStateChange()
             }
         }

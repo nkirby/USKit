@@ -19,12 +19,22 @@ public typealias UIViewAnimationCurve = NSObject
 public typealias UIViewAnimationTransition = NSObject
 public typealias UIMotionEffect = NSObject
     
+// =======================================================
+
+internal class USInternalNSView: NSView {
+    override var flipped: Bool {
+        get { return true }
+    }
+}
+    
+// =======================================================
+
 public class UIView: NSResponder {
     private(set) public var backingView: NSView!
     public var shouldSendTouchEventsAsMouseEvents = true
     
     public var tag = 0
-
+    
 // =======================================================
 // MARK: - Appearance
 
@@ -71,16 +81,12 @@ public class UIView: NSResponder {
     
     public var bounds: CGRect {
         get { return self.backingView.bounds }
+        set { self.backingView.bounds = newValue }
     }
     
-    public var frame = CGRect.zero {
-        didSet {
-            guard let parentView = self.backingView?.superview else {
-                return
-            }
-            
-            self.backingView.frame = self.frame.flippedWithin(parentView.bounds)
-        }
+    public var frame: CGRect {
+        get { return self.backingView.frame }
+        set { self.backingView.frame = newValue }
     }
     
     public var center: CGPoint {
@@ -137,7 +143,7 @@ public class UIView: NSResponder {
     }
     
     public var focused = false
-
+    
 // =======================================================
 // MARK: - Init, etc...
     
@@ -148,34 +154,44 @@ public class UIView: NSResponder {
     public init(frame: CGRect) {
         super.init()
         
-        self.frame = frame
-        self.setupView()
-        self.backingView.frame = frame
-        
-        self.backingView.addObserver(self, forKeyPath: "nextResponder", options: NSKeyValueObservingOptions.New, context: nil)
+        self.setupView(frame: frame)
+        self.gestureRecognizers = []
     }
     
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     
-    public override var acceptsFirstResponder: Bool {
-        return true
+    deinit {
+        self.backingView.removeObserver(self, forKeyPath: "nextResponder")
     }
     
-    private func setupView() {
-        let view = NSView(frame: CGRect.zero)
+    private func setupView(frame frame: CGRect) {
+        let view = self.generateBackingView(frame: frame)
         view.wantsLayer = true
+        view.addObserver(self, forKeyPath: "nextResponder", options: NSKeyValueObservingOptions.New, context: nil)
+
         self.backingView = view
     }
 
+    public func generateBackingView(frame frame: CGRect) -> NSView {
+        return USInternalNSView(frame: frame)
+    }
+    
 // =======================================================
 // MARK: - Layer
     
     public class func layerClass() -> AnyClass {
         return CALayer.self
     }
+
+// =======================================================
+// MARK: - Responder
     
+    public override var acceptsFirstResponder: Bool {
+        return true
+    }
+
 // =======================================================
 // MARK: - KVO
     

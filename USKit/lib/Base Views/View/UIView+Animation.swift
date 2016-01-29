@@ -10,17 +10,37 @@ extension UIView {
 // =======================================================
 // MARK: - Animation
     
-    public class func animateWithDuration(duration: NSTimeInterval, delay: NSTimeInterval, options: UIViewAnimationOptions, animations: () -> Void,
-        completion: ((Bool) -> Void)?) {
-        USUnimplemented()
+    public class func animateWithDuration(duration: NSTimeInterval, delay: NSTimeInterval, options: UIViewAnimationOptions, animations: (() -> Void), completion: ((Bool) -> Void)?) {
+        
+        let block: dispatch_block_t = {
+            NSAnimationContext.runAnimationGroup({ context in
+                context.duration = duration
+                
+                animations()
+            }, completionHandler: {
+                completion?(true)
+            })
+        }
+
+        if delay > 0 {
+            USDispatch.main(delay, block: block)
+        } else {
+            block()
+        }
     }
     
-    public class func animateWithDuration(duration: NSTimeInterval, animations: () -> Void, completion: ((Bool) -> Void)?) {
-        USUnimplemented()
+    public class func animateWithDuration(duration: NSTimeInterval, animations: (() -> Void), completion: ((Bool) -> Void)?) {
+        NSAnimationContext.runAnimationGroup({ context in
+            context.duration = duration
+            
+            animations()
+        }, completionHandler: {
+            completion?(true)
+        })
     }
     
-    public class func animateWithDuration(duration: NSTimeInterval, animations: () -> Void) {
-        USUnimplemented()
+    public class func animateWithDuration(duration: NSTimeInterval, animations: (() -> Void)) {
+        self.animateWithDuration(duration, animations: animations, completion: nil)
     }
     
     public class func transitionWithView(view: UIView, duration: NSTimeInterval, options: UIViewAnimationOptions, animations: (() -> Void)?,
@@ -45,7 +65,7 @@ extension UIView {
     }
     
     public class func performWithoutAnimation(actionsWithoutAnimation: () -> Void) {
-        USUnimplemented()
+        actionsWithoutAnimation()
     }
 
 // =======================================================
@@ -63,9 +83,6 @@ extension UIView {
         USUnimplemented()
     }
     
-    public class func setAnimationsEnabled(enabled: Bool) {
-        USUnimplemented()
-    }
     
     public class func setAnimationDelegate(delegate: AnyObject?) {
         USUnimplemented()
@@ -106,9 +123,16 @@ extension UIView {
     public class func setAnimationTransition(transition: UIViewAnimationTransition, forView view: UIView, cache: Bool) {
         USUnimplemented()
     }
+
+// =======================================================
+// MARK: - 
     
+    public class func setAnimationsEnabled(enabled: Bool) {
+        USAnimator.sharedAnimator().animationsEnabled = enabled
+    }
+
     public class func areAnimationsEnabled() -> Bool {
-        USUnimplemented()
+        return USAnimator.sharedAnimator().animationsEnabled
     }
     
 // =======================================================

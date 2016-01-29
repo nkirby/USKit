@@ -27,7 +27,7 @@ extension UIView {
     }
     
     public func setNeedsLayout() {
-        USUnimplemented()
+        self.backingView.layer?.setNeedsLayout()
     }
     
     public func layoutIfNeeded() {
@@ -53,7 +53,7 @@ extension UIView {
     }
     
     public func setNeedsDisplay() {
-        USUnimplemented()
+        self.backingView.layer?.setNeedsDisplay()
     }
     
     public func setNeedsDisplayInRect(rect: CGRect) {
