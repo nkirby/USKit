@@ -40,6 +40,7 @@ public class USContainerView: NSView {
     private func setupContainerView() {
         self.wantsLayer = true
         self.layerContentsRedrawPolicy = .OnSetNeedsDisplay
+        
     }
     
 // =======================================================
@@ -48,6 +49,23 @@ public class USContainerView: NSView {
     public override func viewWillMoveToSuperview(newSuperview: NSView?) {
         super.viewWillMoveToSuperview(newSuperview)
         self.needsDisplay = true
+        
+    }
+    
+    public override func viewWillMoveToWindow(newWindow: NSWindow?) {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: NSWindowDidBecomeKeyNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: NSWindowDidResignKeyNotification, object: nil)
+        
+        super.viewWillMoveToWindow(newWindow)
+    }
+    
+    public override func viewDidMoveToWindow() {
+        super.viewDidMoveToWindow()
+        
+        if let window = self.window {
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "didBecomeKeyWindow:", name: NSWindowDidBecomeKeyNotification, object: window)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "didResignKeyWindow:", name: NSWindowDidResignKeyNotification, object: window)
+        }
     }
     
     public override func layoutSublayersOfLayer(layer: CALayer) {
@@ -95,6 +113,19 @@ public class USContainerView: NSView {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: USKitApplicationStateChangedNotification, object: nil)
         self.presentViewController(rootViewController, animated: true, completion: nil)
         NSNotificationCenter.defaultCenter().postNotificationName(USContainerViewDidChangeRootViewControllerNotification, object: self)
+    }
+    
+// =======================================================
+// MARK: - View Visibility
+    
+    @objc private func didBecomeKeyWindow(sender: NSNotification) {
+        self.rootViewController?.viewWillAppear(false)
+        self.rootViewController?.viewDidAppear(false)
+    }
+    
+    @objc private func didResignKeyWindow(sender: NSNotification) {
+        self.rootViewController?.viewWillDisappear(false)
+        self.rootViewController?.viewDidDisappear(false)
     }
 }
 

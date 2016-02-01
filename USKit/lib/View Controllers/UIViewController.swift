@@ -209,15 +209,27 @@ public class UIViewController: UIResponder {
     }
     
     public func viewWillAppear(animated: Bool) {
+        for vc in self.childViewControllers {
+            vc.viewWillAppear(animated)
+        }
     }
     
     public func viewDidAppear(animated: Bool) {
+        for vc in self.childViewControllers {
+            vc.viewDidAppear(animated)
+        }
     }
     
     public func viewWillDisappear(animated: Bool) {
+        for vc in self.childViewControllers {
+            vc.viewWillDisappear(animated)
+        }
     }
     
     public func viewDidDisappear(animated: Bool) {
+        for vc in self.childViewControllers {
+            vc.viewDidDisappear(animated)
+        }
     }
     
     public func willMoveToParentViewController(parent: UIViewController?) {
