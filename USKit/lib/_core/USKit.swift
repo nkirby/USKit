@@ -19,6 +19,7 @@ public class USKit: NSObject {
     
     public func setupUIKitBridge() {
         #if os(OSX)
+            print("allows implicit animation")
         NSAnimationContext.currentContext().allowsImplicitAnimation = true
         #endif
     }

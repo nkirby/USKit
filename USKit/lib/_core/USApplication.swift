@@ -6,7 +6,17 @@
 #if os(OSX)
 import Cocoa
 
+public enum USKitApplicationState: Int {
+    case Launching
+    case Launched
+}
+
+public let USKitApplicationStateChangedNotification = "USKitApplicationStateChangedNotification"
+    
+// =======================================================
+
 public final class USApplication: NSObject {
+    internal(set) public var state: USKitApplicationState = .Launching
     internal var applicationState = UIApplicationState.Background
     internal var uiApplication: UIApplication?
     
@@ -36,6 +46,9 @@ public final class USApplication: NSObject {
         
         USDispatch.main(self.applicationStartupDelay) {
             delegate.application?(uiApplication, didFinishLaunchingWithOptions: nil)
+            self.state = .Launched
+            
+            NSNotificationCenter.defaultCenter().postNotificationName(USKitApplicationStateChangedNotification, object: nil)
         }
     }
     

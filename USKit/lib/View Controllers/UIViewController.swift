@@ -287,11 +287,15 @@ public class UIViewController: UIResponder {
 // MARK: - Layout
     
     public func viewWillLayoutSubviews() {
-        USUnimplemented()
+        for vc in self.childViewControllers {
+            vc.viewWillLayoutSubviews()
+        }
     }
     
     public func viewDidLayoutSubviews() {
-        USUnimplemented()
+        for vc in self.childViewControllers {
+            vc.viewDidLayoutSubviews()
+        }
     }
     
     public func updateViewConstraints() {
@@ -330,11 +334,25 @@ public class UIViewController: UIResponder {
 // MARK: - Child View Controllers
     
     public func addChildViewController(viewController: UIViewController) {
-        USUnimplemented()
+        if let _ = viewController.parentViewController {
+            viewController.removeFromParentViewController()
+        }
+        
+        viewController.willMoveToParentViewController(self)
+        self.childViewControllers.append(viewController)
+        viewController.didMoveToParentViewController(self)
     }
     
     public func removeFromParentViewController() {
-        USUnimplemented()
+        self.willMoveToParentViewController(nil)
+        self.parentViewController?._removeChildViewController(self)
+        self.didMoveToParentViewController(nil)
+    }
+    
+    private func _removeChildViewController(viewController: UIViewController) {
+        if let idx = self.childViewControllers.indexOf(viewController) {
+            self.childViewControllers.removeAtIndex(idx)
+        }
     }
     
     public func transitionFromViewController(fromViewController: UIViewController, toViewController: UIViewController, duration: NSTimeInterval, options: UIViewAnimationOptions, animations: (() -> Void)?, completion: ((Bool) -> Void)?) {

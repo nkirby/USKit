@@ -14,6 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         USKit.sharedInstance().setupUIKitBridge()
+        USApplication.sharedApplication().applicationStartupDelay = 0.1
         
         let appDelegate = UIAppDelegate()
         USApplication.sharedApplication().forwardApplicationLifecycleTo(appDelegate)

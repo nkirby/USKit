@@ -52,18 +52,21 @@ class ViewController: NSViewController {
         self.containerView.frame = containerViewFrame //self.view.bounds
         self.containerView.autoresizingMask = [.ViewWidthSizable, .ViewHeightSizable]
         self.view.addSubview(self.containerView)
+
+        let rootViewController = USKRootViewController(nibName: nil, bundle: nil)
+        self.containerView.presentRootViewController(rootViewController, animated: true, completion: nil)
         
-        let testView = TestView(frame: self.containerView.bounds)
-        testView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        testView.backgroundColor = NSColor.redColor()
-        self.containerView.presentView(testView)
-        
-        let blueView = Test2View(frame: CGRect(x: 10, y: 10, width: 44, height: 44))
-        blueView.backgroundColor = NSColor.blueColor()
-        blueView.autoresizingMask = [.FlexibleBottomMargin, .FlexibleRightMargin]
-        testView.addSubview(blueView)
-        
-        blueView.addTarget(self, action: "didTap:", forControlEvents: .TouchDown)
+//        let testView = TestView(frame: self.containerView.bounds)
+//        testView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+//        testView.backgroundColor = NSColor.redColor()
+//        self.containerView.presentView(testView)
+//        
+//        let blueView = Test2View(frame: CGRect(x: 10, y: 10, width: 44, height: 44))
+//        blueView.backgroundColor = NSColor.blueColor()
+//        blueView.autoresizingMask = [.FlexibleBottomMargin, .FlexibleRightMargin]
+//        testView.addSubview(blueView)
+//        
+//        blueView.addTarget(self, action: "didTap:", forControlEvents: .TouchDown)
     }
 
     override func viewWillLayout() {

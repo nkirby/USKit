@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43C144851C5C2E79002C23EA /* USKRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C144841C5C2E79002C23EA /* USKRootViewController.swift */; };
 		43EC1F571C4D517500C3BDD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1F561C4D517500C3BDD6 /* AppDelegate.swift */; };
 		43EC1F591C4D517500C3BDD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC1F581C4D517500C3BDD6 /* ViewController.swift */; };
 		43EC1F5B1C4D517500C3BDD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43EC1F5A1C4D517500C3BDD6 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43C144841C5C2E79002C23EA /* USKRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USKRootViewController.swift; sourceTree = "<group>"; };
 		43EC1F531C4D517500C3BDD6 /* USKitMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = USKitMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43EC1F561C4D517500C3BDD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43EC1F581C4D517500C3BDD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				43EC1F561C4D517500C3BDD6 /* AppDelegate.swift */,
 				43EC1F581C4D517500C3BDD6 /* ViewController.swift */,
+				43C144841C5C2E79002C23EA /* USKRootViewController.swift */,
 				43EC1F5A1C4D517500C3BDD6 /* Assets.xcassets */,
 				43EC1F5C1C4D517500C3BDD6 /* Main.storyboard */,
 				43EC1F5F1C4D517500C3BDD6 /* Info.plist */,
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C144851C5C2E79002C23EA /* USKRootViewController.swift in Sources */,
 				43EC1FED1C4DB59B00C3BDD6 /* UIAppDelegate.swift in Sources */,
 				43EC1F591C4D517500C3BDD6 /* ViewController.swift in Sources */,
 				43EC1F571C4D517500C3BDD6 /* AppDelegate.swift in Sources */,

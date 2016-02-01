@@ -32,6 +32,7 @@ extension UIView {
     public class func animateWithDuration(duration: NSTimeInterval, animations: (() -> Void), completion: ((Bool) -> Void)?) {
         NSAnimationContext.runAnimationGroup({ context in
             context.duration = duration
+            context.allowsImplicitAnimation = true
             
             animations()
         }, completionHandler: {

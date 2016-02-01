@@ -6,18 +6,23 @@
 #if os(OSX)
 import Cocoa
 
+public let USContainerViewDidChangeRootViewControllerNotification = "USContainerViewDidChangeRootViewControllerNotification"
+    
+// =======================================================
+
 public class USContainerView: NSView {
     public override var flipped: Bool {
-        get { return true }
-        set { }
+        return true
     }
-//    public override var canDrawSubviewsIntoLayer: Bool {
-//        get { return true }
-//        set { }
-//    }
+    
     public override var wantsUpdateLayer: Bool {
         return true
     }
+
+    private(set) public var rootViewController: UIViewController?
+    
+// =======================================================
+// MARK: - Init, etc...
     
     public override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -26,37 +31,71 @@ public class USContainerView: NSView {
     }
     
     public required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        
-        self.setupContainerView()
+        USUnimplemented()
     }
 
+// =======================================================
+// MARK: - Setup
+    
     private func setupContainerView() {
         self.wantsLayer = true
         self.layerContentsRedrawPolicy = .OnSetNeedsDisplay
     }
+    
+// =======================================================
+// MARK: - Layout
     
     public override func viewWillMoveToSuperview(newSuperview: NSView?) {
         super.viewWillMoveToSuperview(newSuperview)
         self.needsDisplay = true
     }
     
-    public override func updateLayer() {
-//        self.layer?.backgroundColor = NSColor.redColor().CGColor
+    public override func layoutSublayersOfLayer(layer: CALayer) {
+        self.rootViewController?.viewWillLayoutSubviews()
+        self.rootViewController?.viewDidLayoutSubviews()
     }
     
-    private var subview: UIView?
+// =======================================================
+// MARK: - Presenting
     
-    public func presentView(view: UIView, animated: Bool = false) {
-        self.subview = view
-        view.window = self.window
-        self.addSubview(view.backingView)
-    }
-    
-    public override var frame: NSRect {
-        didSet {
+    public func presentViewController(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
+        viewController.view.frame = self.bounds
+        viewController.view.alpha = 0.0
+        viewController.view.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        self.addSubview(viewController.view.backingView)
+        
+        let block = {
+            viewController.view.alpha = 1.0
+        }
+        
+        if animated {
+            UIView.animateWithDuration(0.2, animations: block)
+        } else {
+            block()
         }
     }
-}
     
+    public func presentRootViewController(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
+        self.rootViewController = viewController
+        
+        if USApplication.sharedApplication().state == .Launched {
+            self.presentViewController(viewController, animated: animated, completion: completion)
+        } else {
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "didUpdateApplicationState:", name: USKitApplicationStateChangedNotification, object: nil)
+        }
+    }
+    
+    @objc private func didUpdateApplicationState(sender: NSNotification) {
+        precondition(NSThread.isMainThread(), "USKit must fire USKitApplicationStateChangedNotification on the main thread.")
+        
+        guard let rootViewController = self.rootViewController else {
+            return
+        }
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: USKitApplicationStateChangedNotification, object: nil)
+        self.presentViewController(rootViewController, animated: true, completion: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName(USContainerViewDidChangeRootViewControllerNotification, object: self)
+    }
+}
+
 #endif
