@@ -6,8 +6,11 @@
 #if os(OSX)
 import Cocoa
 
-// =======================================================
-    
+// =======================================================    
+/** 
+It's UI Device!
+*/
+
 public final class UIDevice: NSObject {
     
 // =======================================================
@@ -99,5 +102,4 @@ public final class UIDevice: NSObject {
         NSLog("USKit cannot generate device orientation notifications on Mac")
     }
 }
-
 #endif

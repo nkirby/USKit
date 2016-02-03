@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NSIndexPath Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/NSIndexPath" class="dashAnchor"></a>
+    <a title="NSIndexPath Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/nkirby/USKit"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        NSIndexPath Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/UIApplication.html">UIApplication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIControl.html">UIControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIDevice.html">UIDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIEvent.html">UIEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIGestureRecognizer.html">UIGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:C5USKit7UIImage">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UINavigationItem.html">UINavigationItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UITouch.html">UITouch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIViewController.html">UIViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USAnimator.html">USAnimator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USApplication.html">USApplication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USContainerView.html">USContainerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USKit.html">USKit</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit40UIApplicationDidBecomeActiveNotificationSS">UIApplicationDidBecomeActiveNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit43UIApplicationDidEnterBackgroundNotificationSS">UIApplicationDidEnterBackgroundNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit44UIApplicationWillEnterForegroundNotificationSS">UIApplicationWillEnterForegroundNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit41UIApplicationWillResignActiveNotificationSS">UIApplicationWillResignActiveNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit38UIApplicationWillTerminateNotificationSS">UIApplicationWillTerminateNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit34UIBackgroundRefreshStatusAvailableOS_25UIBackgroundRefreshStatus">UIBackgroundRefreshStatusAvailable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit31UIBackgroundRefreshStatusDeniedOS_25UIBackgroundRefreshStatus">UIBackgroundRefreshStatusDenied</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit35UIBackgroundRefreshStatusRestrictedOS_25UIBackgroundRefreshStatus">UIBackgroundRefreshStatusRestricted</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit41UIDeviceBatteryLevelDidChangeNotificationSS">UIDeviceBatteryLevelDidChangeNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit41UIDeviceBatteryStateDidChangeNotificationSS">UIDeviceBatteryStateDidChangeNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit27UIDeviceBatteryStateUnknownSf">UIDeviceBatteryStateUnknown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit40UIDeviceOrientationDidChangeNotificationSS">UIDeviceOrientationDidChangeNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit27UIDeviceOrientationFaceDownOS_19UIDeviceOrientation">UIDeviceOrientationFaceDown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit25UIDeviceOrientationFaceUpOS_19UIDeviceOrientation">UIDeviceOrientationFaceUp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit32UIDeviceOrientationLandscapeLeftOS_19UIDeviceOrientation">UIDeviceOrientationLandscapeLeft</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit33UIDeviceOrientationLandscapeRightOS_19UIDeviceOrientation">UIDeviceOrientationLandscapeRight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit26UIDeviceOrientationPortraiOS_19UIDeviceOrientation">UIDeviceOrientationPortrai</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit37UIDeviceOrientationPortraitUpsideDownOS_19UIDeviceOrientation">UIDeviceOrientationPortraitUpsideDown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit26UIDeviceOrientationUnknownOS_19UIDeviceOrientation">UIDeviceOrientationUnknown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit43UIDeviceProximityStateDidChangeNotificationSS">UIDeviceProximityStateDidChangeNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit16UIEdgeInsetsZeroVS_12UIEdgeInsets">UIEdgeInsetsZero</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit20UIFloatRangeInfiniteVS_12UIFloatRange">UIFloatRangeInfinite</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit16UIFloatRangeZeroVS_12UIFloatRange">UIFloatRangeZero</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit35UIInterfaceOrientationLandscapeLeftOS_22UIInterfaceOrientation">UIInterfaceOrientationLandscapeLeft</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit36UIInterfaceOrientationLandscapeRightOS_22UIInterfaceOrientation">UIInterfaceOrientationLandscapeRight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit30UIInterfaceOrientationPortraitOS_22UIInterfaceOrientation">UIInterfaceOrientationPortrait</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit40UIInterfaceOrientationPortraitUpsideDownOS_22UIInterfaceOrientation">UIInterfaceOrientationPortraitUpsideDown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit29UIInterfaceOrientationUnknownOS_22UIInterfaceOrientation">UIInterfaceOrientationUnknown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit12UIOffsetZeroVS_8UIOffset">UIOffsetZero</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit13UIRectEdgeAllVS_10UIRectEdge">UIRectEdgeAll</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit16UIRectEdgeBottomVS_10UIRectEdge">UIRectEdgeBottom</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit14UIRectEdgeLeftVS_10UIRectEdge">UIRectEdgeLeft</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit14UIRectEdgeNoneVS_10UIRectEdge">UIRectEdgeNone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit15UIRectEdgeRightVS_10UIRectEdge">UIRectEdgeRight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit13UIRectEdgeTopVS_10UIRectEdge">UIRectEdgeTop</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit41UIUserInterfaceLayoutDirectionLeftToRightOSC30NSUserInterfaceLayoutDirection">UIUserInterfaceLayoutDirectionLeftToRight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit42UIUserInterfaceLayoutDirectionRightToLefftOSC30NSUserInterfaceLayoutDirection">UIUserInterfaceLayoutDirectionRightToLefft</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit54USContainerViewDidChangeRootViewControllerNotificationSS">USContainerViewDidChangeRootViewControllerNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit40USKitApplicationStateChangedNotificationSS">USKitApplicationStateChangedNotification</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/UIApplicationState.html">UIApplicationState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIBackgroundRefreshStatus.html">UIBackgroundRefreshStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIControlContentHorizontalAlignment.html">UIControlContentHorizontalAlignment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIControlContentVerticalAlignment.html">UIControlContentVerticalAlignment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIDeviceBatteryState.html">UIDeviceBatteryState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIDeviceOrientation.html">UIDeviceOrientation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIEventSubtype.html">UIEventSubtype</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIEventType.html">UIEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIGestureRecognizerState.html">UIGestureRecognizerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIInterfaceOrientation.html">UIInterfaceOrientation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIModalPresentationStyle.html">UIModalPresentationStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIModalTransitionStyle.html">UIModalTransitionStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIScreenOverscanCompensation.html">UIScreenOverscanCompensation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UITouchPhase.html">UITouchPhase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UITouchType.html">UITouchType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIUserInterfaceIdiom.html">UIUserInterfaceIdiom</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIViewContentMode.html">UIViewContentMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIViewTintAdjustmentMode.html">UIViewTintAdjustmentMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/USKitApplicationState.html">USKitApplicationState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/USUserInterfaceIdiom.html">USUserInterfaceIdiom</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/NSAutoresizingMaskOptions.html">NSAutoresizingMaskOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSIndexPath.html">NSIndexPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/c:objc(cs)NSValue">NSValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIFont.html">UIFont</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIResponder.html">UIResponder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIScreen.html">UIScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF5USKitoi2eeFTVS_8UIOffsetS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF5USKitoi2eeFTVS_12UIFloatRangeS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF5USKitoi2eeFTVS_12UIEdgeInsetsS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit27CGAffineTransformFromStringFSSVSC17CGAffineTransform">CGAffineTransformFromString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit17CGPointFromStringFSSVSC7CGPoint">CGPointFromString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit16CGRectFromStringFSSVSC6CGRect">CGRectFromString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit16CGSizeFromStringFSSVSC6CGSize">CGSizeFromString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit18CGVectorFromStringFSSVSC8CGVector">CGVectorFromString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit29NSStringFromCGAffineTransformFVSC17CGAffineTransformSS">NSStringFromCGAffineTransform(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit19NSStringFromCGPointFVSC7CGPointSS">NSStringFromCGPoint(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit18NSStringFromCGRectFVSC6CGRectSS">NSStringFromCGRect(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit18NSStringFromCGSizeFVSC6CGSizeSS">NSStringFromCGSize(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit20NSStringFromCGVectorFVSC8CGVectorSS">NSStringFromCGVector(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit24NSStringFromUIEdgeInsetsFVS_12UIEdgeInsetsSS">NSStringFromUIEdgeInsets(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit20NSStringFromUIOffsetFVS_8UIOffsetSS">NSStringFromUIOffset(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit30UIDeviceOrientaitonIsLandscapeFOS_19UIDeviceOrientationSb">UIDeviceOrientaitonIsLandscape(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit29UIDeviceOrientationIsPortraitFOS_19UIDeviceOrientationSb">UIDeviceOrientationIsPortrait(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit29UIEdgeInsetsEqualToEdgeInsetsFTVS_12UIEdgeInsetsS0__Sb">UIEdgeInsetsEqualToEdgeInsets(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit22UIEdgeInsetsFromStringFSSVS_12UIEdgeInsets">UIEdgeInsetsFromString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit21UIEdgeInsetsInsetRectFTVSC6CGRectVS_12UIEdgeInsets_S0_">UIEdgeInsetsInsetRect(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit16UIEdgeInsetsMakeFTV12CoreGraphics7CGFloatS1_S1_S1__VS_12UIEdgeInsets">UIEdgeInsetsMake(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit26UIFloatRangeIsEqualToRangeFTVS_12UIFloatRangeS0__Sb">UIFloatRangeIsEqualToRange(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit22UIFloatRangeIsInfiniteFVS_12UIFloatRangeSb">UIFloatRangeIsInfinite(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit16UIFloatRangeMakeFTV12CoreGraphics7CGFloatS1__VS_12UIFloatRange">UIFloatRangeMake(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit25UIImageJPEGRepresentationFTCS_7UIImageV12CoreGraphics7CGFloat_GSqCSo6NSData_">UIImageJPEGRepresentation(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit24UIImagePNGRepresentationFCS_7UIImageGSqCSo6NSData_">UIImagePNGRepresentation(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit30UIImageWriteToSavedPhotosAlbumFTCS_7UIImageGSqPSs9AnyObject__V10ObjectiveC8SelectorGVSs20UnsafeMutablePointerT___T_">UIImageWriteToSavedPhotosAlbum(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit32UIInterfaceOrientationIsPortraitFOS_22UIInterfaceOrientationSb">UIInterfaceOrientationIsPortrait(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit33UIInterfaceOrientationisLandscapeFOS_22UIInterfaceOrientationSb">UIInterfaceOrientationisLandscape(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit21UIOffsetEqualToOffsetFTVS_8UIOffsetS0__Sb">UIOffsetEqualToOffset(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit18UIOffsetFromStringFSSVS_8UIOffset">UIOffsetFromString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit35UISaveVideoAtPathToSavedPhotosAlbumFTSSGSqPSs9AnyObject__V10ObjectiveC8SelectorGVSs20UnsafeMutablePointerT___T_">UISaveVideoAtPathToSavedPhotosAlbum(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit45UIVideoAtPathIsCompatibleWithSavedPhotosAlbumFSSSb">UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit23UI_USER_INTERFACE_IDIOMFT_OS_20UIUserInterfaceIdiom">UI_USER_INTERFACE_IDIOM()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit5USLogFSST_">USLog(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit15USUnimplementedFTSS4fileVSs12StaticString4lineSu_T_">USUnimplemented(_:file:line:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit23US_USER_INTERFACE_IDIOMFT_OS_20USUserInterfaceIdiom">US_USER_INTERFACE_IDIOM()</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/UIApplicationDelegate.html">UIApplicationDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:P5USKit27UIGestureRecognizerDelegate">UIGestureRecognizerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:P5USKit34UIViewControllerPreviewingDelegate">UIViewControllerPreviewingDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:P5USKit37UIViewControllerTransitioningDelegate">UIViewControllerTransitioningDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/UIControlEvents.html">UIControlEvents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UIControlState.html">UIControlState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UIEdgeInsets.html">UIEdgeInsets</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UIFloatRange.html">UIFloatRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UIOffset.html">UIOffset</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UIRectEdge.html">UIRectEdge</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UIViewAutoresizing.html">UIViewAutoresizing</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>NSIndexPath</h1>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE5USKitCSo11NSIndexPathcFMS0_FT3rowSi9inSectionSi_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(row:inSection:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE5USKitCSo11NSIndexPathcFMS0_FT3rowSi9inSectionSi_S0_">init(row:inSection:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE5USKitCSo11NSIndexPath3rowSi"></a>
+                    <a name="//apple_ref/swift/Property/row" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE5USKitCSo11NSIndexPath3rowSi">row</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/nkirby/USKit" target="_blank" rel="external">USKit</a>. All rights reserved. (Last updated: 2016-02-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

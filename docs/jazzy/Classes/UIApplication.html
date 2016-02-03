@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UIApplication Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/UIApplication" class="dashAnchor"></a>
+    <a title="UIApplication Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/nkirby/USKit"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        UIApplication Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/UIApplication.html">UIApplication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIControl.html">UIControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIDevice.html">UIDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIEvent.html">UIEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIGestureRecognizer.html">UIGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:C5USKit7UIImage">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UINavigationItem.html">UINavigationItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UITouch.html">UITouch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIViewController.html">UIViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USAnimator.html">USAnimator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USApplication.html">USApplication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USContainerView.html">USContainerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USKit.html">USKit</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit40UIApplicationDidBecomeActiveNotificationSS">UIApplicationDidBecomeActiveNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit43UIApplicationDidEnterBackgroundNotificationSS">UIApplicationDidEnterBackgroundNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit44UIApplicationWillEnterForegroundNotificationSS">UIApplicationWillEnterForegroundNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit41UIApplicationWillResignActiveNotificationSS">UIApplicationWillResignActiveNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit38UIApplicationWillTerminateNotificationSS">UIApplicationWillTerminateNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit34UIBackgroundRefreshStatusAvailableOS_25UIBackgroundRefreshStatus">UIBackgroundRefreshStatusAvailable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit31UIBackgroundRefreshStatusDeniedOS_25UIBackgroundRefreshStatus">UIBackgroundRefreshStatusDenied</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit35UIBackgroundRefreshStatusRestrictedOS_25UIBackgroundRefreshStatus">UIBackgroundRefreshStatusRestricted</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit41UIDeviceBatteryLevelDidChangeNotificationSS">UIDeviceBatteryLevelDidChangeNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit41UIDeviceBatteryStateDidChangeNotificationSS">UIDeviceBatteryStateDidChangeNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit27UIDeviceBatteryStateUnknownSf">UIDeviceBatteryStateUnknown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit40UIDeviceOrientationDidChangeNotificationSS">UIDeviceOrientationDidChangeNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit27UIDeviceOrientationFaceDownOS_19UIDeviceOrientation">UIDeviceOrientationFaceDown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit25UIDeviceOrientationFaceUpOS_19UIDeviceOrientation">UIDeviceOrientationFaceUp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit32UIDeviceOrientationLandscapeLeftOS_19UIDeviceOrientation">UIDeviceOrientationLandscapeLeft</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit33UIDeviceOrientationLandscapeRightOS_19UIDeviceOrientation">UIDeviceOrientationLandscapeRight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit26UIDeviceOrientationPortraiOS_19UIDeviceOrientation">UIDeviceOrientationPortrai</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit37UIDeviceOrientationPortraitUpsideDownOS_19UIDeviceOrientation">UIDeviceOrientationPortraitUpsideDown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit26UIDeviceOrientationUnknownOS_19UIDeviceOrientation">UIDeviceOrientationUnknown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit43UIDeviceProximityStateDidChangeNotificationSS">UIDeviceProximityStateDidChangeNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit16UIEdgeInsetsZeroVS_12UIEdgeInsets">UIEdgeInsetsZero</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit20UIFloatRangeInfiniteVS_12UIFloatRange">UIFloatRangeInfinite</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit16UIFloatRangeZeroVS_12UIFloatRange">UIFloatRangeZero</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit35UIInterfaceOrientationLandscapeLeftOS_22UIInterfaceOrientation">UIInterfaceOrientationLandscapeLeft</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit36UIInterfaceOrientationLandscapeRightOS_22UIInterfaceOrientation">UIInterfaceOrientationLandscapeRight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit30UIInterfaceOrientationPortraitOS_22UIInterfaceOrientation">UIInterfaceOrientationPortrait</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit40UIInterfaceOrientationPortraitUpsideDownOS_22UIInterfaceOrientation">UIInterfaceOrientationPortraitUpsideDown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit29UIInterfaceOrientationUnknownOS_22UIInterfaceOrientation">UIInterfaceOrientationUnknown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit12UIOffsetZeroVS_8UIOffset">UIOffsetZero</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit13UIRectEdgeAllVS_10UIRectEdge">UIRectEdgeAll</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit16UIRectEdgeBottomVS_10UIRectEdge">UIRectEdgeBottom</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit14UIRectEdgeLeftVS_10UIRectEdge">UIRectEdgeLeft</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit14UIRectEdgeNoneVS_10UIRectEdge">UIRectEdgeNone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit15UIRectEdgeRightVS_10UIRectEdge">UIRectEdgeRight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit13UIRectEdgeTopVS_10UIRectEdge">UIRectEdgeTop</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit41UIUserInterfaceLayoutDirectionLeftToRightOSC30NSUserInterfaceLayoutDirection">UIUserInterfaceLayoutDirectionLeftToRight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit42UIUserInterfaceLayoutDirectionRightToLefftOSC30NSUserInterfaceLayoutDirection">UIUserInterfaceLayoutDirectionRightToLefft</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit54USContainerViewDidChangeRootViewControllerNotificationSS">USContainerViewDidChangeRootViewControllerNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5USKit40USKitApplicationStateChangedNotificationSS">USKitApplicationStateChangedNotification</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/UIApplicationState.html">UIApplicationState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIBackgroundRefreshStatus.html">UIBackgroundRefreshStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIControlContentHorizontalAlignment.html">UIControlContentHorizontalAlignment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIControlContentVerticalAlignment.html">UIControlContentVerticalAlignment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIDeviceBatteryState.html">UIDeviceBatteryState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIDeviceOrientation.html">UIDeviceOrientation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIEventSubtype.html">UIEventSubtype</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIEventType.html">UIEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIGestureRecognizerState.html">UIGestureRecognizerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIInterfaceOrientation.html">UIInterfaceOrientation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIModalPresentationStyle.html">UIModalPresentationStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIModalTransitionStyle.html">UIModalTransitionStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIScreenOverscanCompensation.html">UIScreenOverscanCompensation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UITouchPhase.html">UITouchPhase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UITouchType.html">UITouchType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIUserInterfaceIdiom.html">UIUserInterfaceIdiom</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIViewContentMode.html">UIViewContentMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UIViewTintAdjustmentMode.html">UIViewTintAdjustmentMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/USKitApplicationState.html">USKitApplicationState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/USUserInterfaceIdiom.html">USUserInterfaceIdiom</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/NSAutoresizingMaskOptions.html">NSAutoresizingMaskOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSIndexPath.html">NSIndexPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/c:objc(cs)NSValue">NSValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIFont.html">UIFont</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIResponder.html">UIResponder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIScreen.html">UIScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF5USKitoi2eeFTVS_8UIOffsetS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF5USKitoi2eeFTVS_12UIFloatRangeS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF5USKitoi2eeFTVS_12UIEdgeInsetsS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit27CGAffineTransformFromStringFSSVSC17CGAffineTransform">CGAffineTransformFromString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit17CGPointFromStringFSSVSC7CGPoint">CGPointFromString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit16CGRectFromStringFSSVSC6CGRect">CGRectFromString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit16CGSizeFromStringFSSVSC6CGSize">CGSizeFromString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit18CGVectorFromStringFSSVSC8CGVector">CGVectorFromString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit29NSStringFromCGAffineTransformFVSC17CGAffineTransformSS">NSStringFromCGAffineTransform(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit19NSStringFromCGPointFVSC7CGPointSS">NSStringFromCGPoint(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit18NSStringFromCGRectFVSC6CGRectSS">NSStringFromCGRect(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit18NSStringFromCGSizeFVSC6CGSizeSS">NSStringFromCGSize(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit20NSStringFromCGVectorFVSC8CGVectorSS">NSStringFromCGVector(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit24NSStringFromUIEdgeInsetsFVS_12UIEdgeInsetsSS">NSStringFromUIEdgeInsets(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit20NSStringFromUIOffsetFVS_8UIOffsetSS">NSStringFromUIOffset(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit30UIDeviceOrientaitonIsLandscapeFOS_19UIDeviceOrientationSb">UIDeviceOrientaitonIsLandscape(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit29UIDeviceOrientationIsPortraitFOS_19UIDeviceOrientationSb">UIDeviceOrientationIsPortrait(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit29UIEdgeInsetsEqualToEdgeInsetsFTVS_12UIEdgeInsetsS0__Sb">UIEdgeInsetsEqualToEdgeInsets(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit22UIEdgeInsetsFromStringFSSVS_12UIEdgeInsets">UIEdgeInsetsFromString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit21UIEdgeInsetsInsetRectFTVSC6CGRectVS_12UIEdgeInsets_S0_">UIEdgeInsetsInsetRect(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit16UIEdgeInsetsMakeFTV12CoreGraphics7CGFloatS1_S1_S1__VS_12UIEdgeInsets">UIEdgeInsetsMake(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit26UIFloatRangeIsEqualToRangeFTVS_12UIFloatRangeS0__Sb">UIFloatRangeIsEqualToRange(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit22UIFloatRangeIsInfiniteFVS_12UIFloatRangeSb">UIFloatRangeIsInfinite(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit16UIFloatRangeMakeFTV12CoreGraphics7CGFloatS1__VS_12UIFloatRange">UIFloatRangeMake(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit25UIImageJPEGRepresentationFTCS_7UIImageV12CoreGraphics7CGFloat_GSqCSo6NSData_">UIImageJPEGRepresentation(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit24UIImagePNGRepresentationFCS_7UIImageGSqCSo6NSData_">UIImagePNGRepresentation(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit30UIImageWriteToSavedPhotosAlbumFTCS_7UIImageGSqPSs9AnyObject__V10ObjectiveC8SelectorGVSs20UnsafeMutablePointerT___T_">UIImageWriteToSavedPhotosAlbum(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit32UIInterfaceOrientationIsPortraitFOS_22UIInterfaceOrientationSb">UIInterfaceOrientationIsPortrait(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit33UIInterfaceOrientationisLandscapeFOS_22UIInterfaceOrientationSb">UIInterfaceOrientationisLandscape(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit21UIOffsetEqualToOffsetFTVS_8UIOffsetS0__Sb">UIOffsetEqualToOffset(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit18UIOffsetFromStringFSSVS_8UIOffset">UIOffsetFromString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit35UISaveVideoAtPathToSavedPhotosAlbumFTSSGSqPSs9AnyObject__V10ObjectiveC8SelectorGVSs20UnsafeMutablePointerT___T_">UISaveVideoAtPathToSavedPhotosAlbum(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit45UIVideoAtPathIsCompatibleWithSavedPhotosAlbumFSSSb">UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit23UI_USER_INTERFACE_IDIOMFT_OS_20UIUserInterfaceIdiom">UI_USER_INTERFACE_IDIOM()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit5USLogFSST_">USLog(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit15USUnimplementedFTSS4fileVSs12StaticString4lineSu_T_">USUnimplemented(_:file:line:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5USKit23US_USER_INTERFACE_IDIOMFT_OS_20USUserInterfaceIdiom">US_USER_INTERFACE_IDIOM()</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/UIApplicationDelegate.html">UIApplicationDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:P5USKit27UIGestureRecognizerDelegate">UIGestureRecognizerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:P5USKit34UIViewControllerPreviewingDelegate">UIViewControllerPreviewingDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:P5USKit37UIViewControllerTransitioningDelegate">UIViewControllerTransitioningDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/UIControlEvents.html">UIControlEvents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UIControlState.html">UIControlState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UIEdgeInsets.html">UIEdgeInsets</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UIFloatRange.html">UIFloatRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UIOffset.html">UIOffset</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UIRectEdge.html">UIRectEdge</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UIViewAutoresizing.html">UIViewAutoresizing</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>UIApplication</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5USKit13UIApplication8delegateGSqPS_21UIApplicationDelegate__"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5USKit13UIApplication8delegateGSqPS_21UIApplicationDelegate__">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5USKit13UIApplication30applicationSupportsShakeToEditSb"></a>
+                    <a name="//apple_ref/swift/Property/applicationSupportsShakeToEdit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5USKit13UIApplication30applicationSupportsShakeToEditSb">applicationSupportsShakeToEdit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5USKit13UIApplication27scheduledLocalNotificationsGSqGSaCSo8NSObject__"></a>
+                    <a name="//apple_ref/swift/Property/scheduledLocalNotifications" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5USKit13UIApplication27scheduledLocalNotificationsGSqGSaCSo8NSObject__">scheduledLocalNotifications</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5USKit13UIApplication23backgroundTimeRemainingSd"></a>
+                    <a name="//apple_ref/swift/Property/backgroundTimeRemaining" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5USKit13UIApplication23backgroundTimeRemainingSd">backgroundTimeRemaining</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5USKit13UIApplication23backgroundRefreshStatusOS_25UIBackgroundRefreshStatus"></a>
+                    <a name="//apple_ref/swift/Property/backgroundRefreshStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5USKit13UIApplication23backgroundRefreshStatusOS_25UIBackgroundRefreshStatus">backgroundRefreshStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5USKit13UIApplication17idleTimerDisabledSb"></a>
+                    <a name="//apple_ref/swift/Property/idleTimerDisabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5USKit13UIApplication17idleTimerDisabledSb">idleTimerDisabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC5USKit13UIApplication13shortcutItemsGSqGSaCSo8NSObject__"></a>
+                    <a name="//apple_ref/swift/Variable/shortcutItems" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC5USKit13UIApplication13shortcutItemsGSqGSaCSo8NSObject__">shortcutItems</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5USKit13UIApplication22protectedDataAvailableSb"></a>
+                    <a name="//apple_ref/swift/Property/protectedDataAvailable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5USKit13UIApplication22protectedDataAvailableSb">protectedDataAvailable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5USKit13UIApplication14statusBarFrameVSC6CGRect"></a>
+                    <a name="//apple_ref/swift/Property/statusBarFrame" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5USKit13UIApplication14statusBarFrameVSC6CGRect">statusBarFrame</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5USKit13UIApplication31networkActivityIndicatorVisibleSb"></a>
+                    <a name="//apple_ref/swift/Property/networkActivityIndicatorVisible" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5USKit13UIApplication31networkActivityIndicatorVisibleSb">networkActivityIndicatorVisible</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5USKit13UIApplication26applicationIconBadgeNumberSi"></a>
+                    <a name="//apple_ref/swift/Property/applicationIconBadgeNumber" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5USKit13UIApplication26applicationIconBadgeNumberSi">applicationIconBadgeNumber</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5USKit13UIApplication28preferredContentSizeCategorySS"></a>
+                    <a name="//apple_ref/swift/Property/preferredContentSizeCategory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5USKit13UIApplication28preferredContentSizeCategorySS">preferredContentSizeCategory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5USKit13UIApplication37statusBarOrientationAnimationDurationSd"></a>
+                    <a name="//apple_ref/swift/Property/statusBarOrientationAnimationDuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5USKit13UIApplication37statusBarOrientationAnimationDurationSd">statusBarOrientationAnimationDuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Init,%20etc..."></a>
+                <a name="//apple_ref/swift/Section/Init, etc..." class="dashAnchor"></a>
+                <a href="#/Init,%20etc...">
+                  <h3 class="section-name">Init, etc...</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC5USKit13UIApplication17sharedApplicationFMS0_FT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/sharedApplication()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC5USKit13UIApplication17sharedApplicationFMS0_FT_S0_">sharedApplication()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Events"></a>
+                <a name="//apple_ref/swift/Section/Events" class="dashAnchor"></a>
+                <a href="#/Events">
+                  <h3 class="section-name">Events</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication9sendEventFS0_FCS_7UIEventT_"></a>
+                    <a name="//apple_ref/swift/Method/sendEvent(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication9sendEventFS0_FCS_7UIEventT_">sendEvent(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication10sendActionFS0_FTV10ObjectiveC8Selector2toGSqPSs9AnyObject__4fromGSqPS3___8forEventGSqCS_7UIEvent__Sb"></a>
+                    <a name="//apple_ref/swift/Method/sendAction(_:to:from:forEvent:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication10sendActionFS0_FTV10ObjectiveC8Selector2toGSqPSs9AnyObject__4fromGSqPS3___8forEventGSqCS_7UIEvent__Sb">sendAction(_:to:from:forEvent:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication30beginIgnoringInteractionEventsFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/beginIgnoringInteractionEvents()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication30beginIgnoringInteractionEventsFS0_FT_T_">beginIgnoringInteractionEvents()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication28endIgnoringInteractionEventsFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/endIgnoringInteractionEvents()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication28endIgnoringInteractionEventsFS0_FT_T_">endIgnoringInteractionEvents()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication27isIgnoringInteractionEventsFS0_FT_Sb"></a>
+                    <a name="//apple_ref/swift/Method/isIgnoringInteractionEvents()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication27isIgnoringInteractionEventsFS0_FT_Sb">isIgnoringInteractionEvents()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/URLs"></a>
+                <a name="//apple_ref/swift/Section/URLs" class="dashAnchor"></a>
+                <a href="#/URLs">
+                  <h3 class="section-name">URLs</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication7openURLFS0_FCSo5NSURLSb"></a>
+                    <a name="//apple_ref/swift/Method/openURL(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication7openURLFS0_FCSo5NSURLSb">openURL(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication10canOpenURLFS0_FCSo5NSURLSb"></a>
+                    <a name="//apple_ref/swift/Method/canOpenURL(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication10canOpenURLFS0_FCSo5NSURLSb">canOpenURL(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/User%20Notifications"></a>
+                <a name="//apple_ref/swift/Section/User Notifications" class="dashAnchor"></a>
+                <a href="#/User%20Notifications">
+                  <h3 class="section-name">User Notifications</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication32registerUserNotificationSettingsFS0_FCSo8NSObjectT_"></a>
+                    <a name="//apple_ref/swift/Method/registerUserNotificationSettings(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication32registerUserNotificationSettingsFS0_FCSo8NSObjectT_">registerUserNotificationSettings(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication31currentUserNotificationSettingsFS0_FT_GSqCSo8NSObject_"></a>
+                    <a name="//apple_ref/swift/Method/currentUserNotificationSettings()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication31currentUserNotificationSettingsFS0_FT_GSqCSo8NSObject_">currentUserNotificationSettings()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Remote%20Notifications"></a>
+                <a name="//apple_ref/swift/Section/Remote Notifications" class="dashAnchor"></a>
+                <a href="#/Remote%20Notifications">
+                  <h3 class="section-name">Remote Notifications</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication30registerForRemoteNotificationsFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/registerForRemoteNotifications()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication30registerForRemoteNotificationsFS0_FT_T_">registerForRemoteNotifications()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication32unregisterForRemoteNotificationsFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/unregisterForRemoteNotifications()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication32unregisterForRemoteNotificationsFS0_FT_T_">unregisterForRemoteNotifications()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication34isRegisteredForRemoteNotificationsFS0_FT_Sb"></a>
+                    <a name="//apple_ref/swift/Method/isRegisteredForRemoteNotifications()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication34isRegisteredForRemoteNotificationsFS0_FT_Sb">isRegisteredForRemoteNotifications()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Local%20Notifications"></a>
+                <a name="//apple_ref/swift/Section/Local Notifications" class="dashAnchor"></a>
+                <a href="#/Local%20Notifications">
+                  <h3 class="section-name">Local Notifications</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication25scheduleLocalNotificationFS0_FCSo8NSObjectT_"></a>
+                    <a name="//apple_ref/swift/Method/scheduleLocalNotification(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication25scheduleLocalNotificationFS0_FCSo8NSObjectT_">scheduleLocalNotification(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication27presentLocalNotificationNowFS0_FCSo8NSObjectT_"></a>
+                    <a name="//apple_ref/swift/Method/presentLocalNotificationNow(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication27presentLocalNotificationNowFS0_FCSo8NSObjectT_">presentLocalNotificationNow(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication23cancelLocalNotificationFS0_FCSo8NSObjectT_"></a>
+                    <a name="//apple_ref/swift/Method/cancelLocalNotification(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication23cancelLocalNotificationFS0_FCSo8NSObjectT_">cancelLocalNotification(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication27cancelAllLocalNotificationsFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/cancelAllLocalNotifications()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication27cancelAllLocalNotificationsFS0_FT_T_">cancelAllLocalNotifications()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Background%20Refresh"></a>
+                <a name="//apple_ref/swift/Section/Background Refresh" class="dashAnchor"></a>
+                <a href="#/Background%20Refresh">
+                  <h3 class="section-name">Background Refresh</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication33setMinimumBackgroundFetchIntervalFS0_FSdT_"></a>
+                    <a name="//apple_ref/swift/Method/setMinimumBackgroundFetchInterval(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication33setMinimumBackgroundFetchIntervalFS0_FSdT_">setMinimumBackgroundFetchInterval(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication27beginBackgroundTaskWithNameFS0_FTGSqSS_17expirationHandlerGSqFT_T___CSo8NSObject"></a>
+                    <a name="//apple_ref/swift/Method/beginBackgroundTaskWithName(_:expirationHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication27beginBackgroundTaskWithNameFS0_FTGSqSS_17expirationHandlerGSqFT_T___CSo8NSObject">beginBackgroundTaskWithName(_:expirationHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication40beginBackgroundTaskWithExpirationHandlerFS0_FGSqFT_T__CSo8NSObject"></a>
+                    <a name="//apple_ref/swift/Method/beginBackgroundTaskWithExpirationHandler(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication40beginBackgroundTaskWithExpirationHandlerFS0_FGSqFT_T__CSo8NSObject">beginBackgroundTaskWithExpirationHandler(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication17endBackgroundtaskFS0_FCSo8NSObjectT_"></a>
+                    <a name="//apple_ref/swift/Method/endBackgroundtask(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication17endBackgroundtaskFS0_FCSo8NSObjectT_">endBackgroundtask(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/State%20Restoration"></a>
+                <a name="//apple_ref/swift/Section/State Restoration" class="dashAnchor"></a>
+                <a href="#/State%20Restoration">
+                  <h3 class="section-name">State Restoration</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication22extendStateRestorationFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/extendStateRestoration()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication22extendStateRestorationFS0_FT_T_">extendStateRestoration()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication24completeStateRestorationFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/completeStateRestoration()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication24completeStateRestorationFS0_FT_T_">completeStateRestoration()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication37ignoreSnapshotOnNextApplicationLaunchFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/ignoreSnapshotOnNextApplicationLaunch()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication37ignoreSnapshotOnNextApplicationLaunchFS0_FT_T_">ignoreSnapshotOnNextApplicationLaunch()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC5USKit13UIApplication33registerObjectForStateRestorationFMS0_FTCSo8NSObject21restorationIdentifierSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/registerObjectForStateRestoration(_:restorationIdentifier:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC5USKit13UIApplication33registerObjectForStateRestorationFMS0_FTCSo8NSObject21restorationIdentifierSS_T_">registerObjectForStateRestoration(_:restorationIdentifier:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Remote%20Control%20Events"></a>
+                <a name="//apple_ref/swift/Section/Remote Control Events" class="dashAnchor"></a>
+                <a href="#/Remote%20Control%20Events">
+                  <h3 class="section-name">Remote Control Events</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication33beginReceivingRemoteControlEventsFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/beginReceivingRemoteControlEvents()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication33beginReceivingRemoteControlEventsFS0_FT_T_">beginReceivingRemoteControlEvents()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5USKit13UIApplication31endReceivingRemoteControlEventsFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/endReceivingRemoteControlEvents()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5USKit13UIApplication31endReceivingRemoteControlEventsFS0_FT_T_">endReceivingRemoteControlEvents()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5USKit13UIApplication16applicationStateOS_18UIApplicationState"></a>
+                    <a name="//apple_ref/swift/Property/applicationState" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5USKit13UIApplication16applicationStateOS_18UIApplicationState">applicationState</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5USKit13UIApplication28userInterfaceLayoutDirectionOSC30NSUserInterfaceLayoutDirection"></a>
+                    <a name="//apple_ref/swift/Property/userInterfaceLayoutDirection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5USKit13UIApplication28userInterfaceLayoutDirectionOSC30NSUserInterfaceLayoutDirection">userInterfaceLayoutDirection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5USKit13UIApplication9keyWindowGSqCSo8NSWindow_"></a>
+                    <a name="//apple_ref/swift/Property/keyWindow" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5USKit13UIApplication9keyWindowGSqCSo8NSWindow_">keyWindow</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5USKit13UIApplication7windowsGSaCSo8NSWindow_"></a>
+                    <a name="//apple_ref/swift/Property/windows" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5USKit13UIApplication7windowsGSaCSo8NSWindow_">windows</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">UIApplication</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/nkirby/USKit" target="_blank" rel="external">USKit</a>. All rights reserved. (Last updated: 2016-02-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

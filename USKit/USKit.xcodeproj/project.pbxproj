@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4308897D1C62A442005A3894 /* UITraitCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308897C1C62A442005A3894 /* UITraitCollection.swift */; };
 		431A753D1C5BC52E009242A3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431A753C1C5BC52E009242A3 /* UIViewController.swift */; };
 		435A47641C4DE1660080EC70 /* UIUserInterfaceLayoutDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A47631C4DE1660080EC70 /* UIUserInterfaceLayoutDirection.swift */; };
 		435A47661C4DE25E0080EC70 /* UIApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A47651C4DE25E0080EC70 /* UIApplicationDelegate.swift */; };
@@ -71,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4308897C1C62A442005A3894 /* UITraitCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITraitCollection.swift; path = lib/Device/UITraitCollection.swift; sourceTree = "<group>"; };
 		431A753C1C5BC52E009242A3 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = "lib/View Controllers/UIViewController.swift"; sourceTree = "<group>"; };
 		435A47631C4DE1660080EC70 /* UIUserInterfaceLayoutDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIUserInterfaceLayoutDirection.swift; path = lib/Application/UIUserInterfaceLayoutDirection.swift; sourceTree = "<group>"; };
 		435A47651C4DE25E0080EC70 /* UIApplicationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIApplicationDelegate.swift; path = lib/Application/UIApplicationDelegate.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				43EC1FE51C4DA55C00C3BDD6 /* UIDeviceOrientation.swift */,
 				43EC1FC51C4D55F500C3BDD6 /* UIIInterfaceOrientation.swift */,
 				43EC1FC81C4D56C300C3BDD6 /* UIInterfaceIdiom.swift */,
+				4308897C1C62A442005A3894 /* UITraitCollection.swift */,
 			);
 			name = Device;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 			files = (
 				43EC1FF61C4DDFA600C3BDD6 /* UIApplication+State.swift in Sources */,
 				43EC1FC41C4D549A00C3BDD6 /* UIImage.swift in Sources */,
+				4308897D1C62A442005A3894 /* UITraitCollection.swift in Sources */,
 				43EC1FCD1C4D5CED00C3BDD6 /* UIDeviceConstants.swift in Sources */,
 				43C144741C5B0200002C23EA /* UIGestureRecognizer.swift in Sources */,
 				43EC1FE61C4DA55C00C3BDD6 /* UIDeviceOrientation.swift in Sources */,

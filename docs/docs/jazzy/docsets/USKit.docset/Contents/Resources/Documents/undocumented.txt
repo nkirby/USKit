@@ -1,0 +1,228 @@
+UIApplication+State.swift
+	public enum UIApplicationState: Int
+	public let UIApplicationWillEnterForegroundNotification = "UIApplicationWillEnterForegroundNotification"
+	public let UIApplicationDidBecomeActiveNotification = "UIApplicationDidBecomeActiveNotification"
+	public let UIApplicationWillResignActiveNotification = "UIApplicationWillResignActiveNotification"
+	public let UIApplicationDidEnterBackgroundNotification = "UIApplicationDidEnterBackgroundNotification"
+	public let UIApplicationWillTerminateNotification = "UIApplicationWillTerminateNotification"
+	public var applicationState: UIApplicationState
+UIImage.swift
+	public class UIImage: NSImage
+UIDeviceConstants.swift
+	public let UIDeviceBatteryStateUnknown: Float = -1.0
+	public let UIDeviceBatteryLevelDidChangeNotification = "UIDeviceBatteryLevelDidChangeNotification"
+	public let UIDeviceBatteryStateDidChangeNotification = "UIDeviceBatteryStateDidChangeNotification"
+	public let UIDeviceOrientationDidChangeNotification = "UIDeviceOrientationDidChangeNotification"
+	public let UIDeviceProximityStateDidChangeNotification = "UIDeviceProximityStateDidChangeNotification"
+UIGestureRecognizer.swift
+	public protocol UIGestureRecognizerDelegate: NSObjectProtocol
+	public enum UIGestureRecognizerState : Int
+	public class UIGestureRecognizer: NSObject
+UIDeviceOrientation.swift
+	public enum UIDeviceOrientation : Int
+	public let UIDeviceOrientationUnknown = UIDeviceOrientation.Unknown
+	public let UIDeviceOrientationPortrai = UIDeviceOrientation.Portrait
+	public let UIDeviceOrientationPortraitUpsideDown = UIDeviceOrientation.PortraitUpsideDown
+	public let UIDeviceOrientationLandscapeLeft = UIDeviceOrientation.LandscapeLeft
+	public let UIDeviceOrientationLandscapeRight = UIDeviceOrientation.LandscapeRight
+	public let UIDeviceOrientationFaceUp = UIDeviceOrientation.FaceUp
+	public let UIDeviceOrientationFaceDown = UIDeviceOrientation.FaceDown
+	public func UIDeviceOrientationIsPortrait(orientation: UIDeviceOrientation) -> Bool
+	public func UIDeviceOrientaitonIsLandscape(orientation: UIDeviceOrientation) -> Bool
+UIDevice.swift
+	public static func currentDevice() -> UIDevice
+	public let multitaskingSupported = true
+	public let name: String
+	public let systemName: String
+	public let systemVersion: String
+	public let model: String
+	public let localizedModel: String
+	public let userInterfaceIdiom = UIUserInterfaceIdiom.Unspecified
+	public let identifierForVendor: NSUUID?
+	public let orientation = UIDeviceOrientation.Unknown
+	public var generatesDeviceOrientationNotifications: Bool
+	public var batteryLevel: Float
+	public var batteryMonitoringEnabled: Bool
+	public var batteryState = UIDeviceBatteryState.Unknown
+	public var proximityMonitoringEnabled: Bool
+	public var proximityState = false
+	public var playInputClick: Bool
+	public func beginGeneratingDeviceOrientationNotifications()
+	public func endGeneratingDeviceOrientationNotifications()
+UIView.swift
+	public class UIView : NSResponder
+	public class UIView : NSResponder
+	public class UIView : NSResponder
+	public class UIView : NSResponder
+	public class UIView: NSResponder
+	public class UIView : NSResponder
+UIRectEdge.swift
+	public struct UIRectEdge : OptionSetType
+	public let UIRectEdgeNone = UIRectEdge.None
+	public let UIRectEdgeTop = UIRectEdge.Top
+	public let UIRectEdgeLeft = UIRectEdge.Left
+	public let UIRectEdgeBottom = UIRectEdge.Bottom
+	public let UIRectEdgeRight = UIRectEdge.Right
+	public let UIRectEdgeAll = UIRectEdge.All
+UIEvent.swift
+	public enum UIEventType : Int
+	public enum UIEventSubtype : Int
+	public class UIEvent: NSObject
+UIScreenOverscanCompensation.swift
+	public enum UIScreenOverscanCompensation : Int
+UIScreen.swift
+	public typealias UIScreen = NSScreen
+	public typealias UIScreen = NSScreen
+USImageManipulation.swift
+	public func UIImageJPEGRepresentation(image: UIImage, _ compressionQuality: CGFloat) -> NSData?
+	public func UIImagePNGRepresentation(image: UIImage) -> NSData?
+	public func UIImageWriteToSavedPhotosAlbum(image: UIImage, _ completionTarget: AnyObject?, _ completionSelector: Selector, _ contextInfo: UnsafeMutablePointer<Void>)
+	public func UISaveVideoAtPathToSavedPhotosAlbum(videoPath: String, _ completionTarget: AnyObject?, _ completionSelector: Selector, _ contextInfo: UnsafeMutablePointer<Void>)
+	public func UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(videoPath: String) -> Bool
+UIUserInterfaceLayoutDirection.swift
+	public let UIUserInterfaceLayoutDirectionLeftToRight = UIUserInterfaceLayoutDirection.LeftToRight
+	public let UIUserInterfaceLayoutDirectionRightToLefft = UIUserInterfaceLayoutDirection.RightToLeft
+	public var userInterfaceLayoutDirection: UIUserInterfaceLayoutDirection
+UIApplication+Windows.swift
+	public var keyWindow: UIWindow?
+	public var windows: [UIWindow]
+UIViewDataTypes.swift
+	public enum UIViewContentMode: Int
+	public enum UIViewTintAdjustmentMode : Int
+UIIInterfaceOrientation.swift
+	public enum UIInterfaceOrientation: Int
+	public let UIInterfaceOrientationUnknown = UIInterfaceOrientation.Unknown
+	public let UIInterfaceOrientationPortrait = UIInterfaceOrientation.Portrait
+	public let UIInterfaceOrientationPortraitUpsideDown = UIInterfaceOrientation.PortraitUpsideDown
+	public let UIInterfaceOrientationLandscapeLeft = UIInterfaceOrientation.LandscapeLeft
+	public let UIInterfaceOrientationLandscapeRight = UIInterfaceOrientation.LandscapeRight
+	public func UIInterfaceOrientationIsPortrait(orientation: UIInterfaceOrientation) -> Bool
+	public func UIInterfaceOrientationisLandscape(orientation: UIInterfaceOrientation) -> Bool
+UIOffset.swift
+	public struct UIOffset
+	public func == (lhs: UIOffset, rhs: UIOffset) -> Bool
+	public func UIOffsetEqualToOffset(offset1: UIOffset, _ offset2: UIOffset) -> Bool
+	public var UIOffsetZero: UIOffset
+USAnimator.swift
+	public class USAnimator: NSObject
+UIApplicationDelegate.swift
+	@objc public protocol UIApplicationDelegate: NSObjectProtocol
+USKit.swift
+	public class USKit: NSObject
+UIControl.swift
+	public class UIControl: UIView
+UIFloatRange.swift
+	public struct UIFloatRange
+	public func == (lhs: UIFloatRange, rhs: UIFloatRange) -> Bool
+	public let UIFloatRangeZero = UIFloatRange()
+	public let UIFloatRangeInfinite = UIFloatRange(minimum: 0, maximum: CGFloat.infinity)
+	public func UIFloatRangeIsInfinite(floatRange: UIFloatRange) -> Bool
+	public func UIFloatRangeIsEqualToRange(range: UIFloatRange, _ otherRange: UIFloatRange) -> Bool
+	public func UIFloatRangeMake(minimum: CGFloat, _ maximum: CGFloat) -> UIFloatRange
+UIInterfaceIdiom.swift
+	public enum UIUserInterfaceIdiom
+	public func UI_USER_INTERFACE_IDIOM() -> UIUserInterfaceIdiom
+	public enum USUserInterfaceIdiom
+	public func US_USER_INTERFACE_IDIOM() -> USUserInterfaceIdiom
+UIEdgeInsets.swift
+	public struct UIEdgeInsets
+	public func == (lhs: UIEdgeInsets, rhs: UIEdgeInsets) -> Bool
+	public func UIEdgeInsetsMake(top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat) -> UIEdgeInsets
+	public func UIEdgeInsetsInsetRect(rect: CGRect, _ insets: UIEdgeInsets) -> CGRect
+	public func UIEdgeInsetsEqualToEdgeInsets(insets1: UIEdgeInsets, _ insets2: UIEdgeInsets) -> Bool
+	public var UIEdgeInsetsZero: UIEdgeInsets
+NSString+StringConversions.swift
+	public func NSStringFromCGAffineTransform(transform: CGAffineTransform) -> String
+	public func NSStringFromCGPoint(point: CGPoint) -> String
+	public func NSStringFromCGRect(rect: CGRect) -> String
+	public func NSStringFromCGSize(size: CGSize) -> String
+	public func NSStringFromCGVector(vector: CGVector) -> String
+	public func NSStringFromUIEdgeInsets(insets: UIEdgeInsets) -> String
+	public func NSStringFromUIOffset(offset: UIOffset) -> String
+	public func CGAffineTransformFromString(string: String) -> CGAffineTransform
+	public func CGPointFromString(string: String) -> CGPoint
+	public func CGRectFromString(string: String) -> CGRect
+	public func CGSizeFromString(string: String) -> CGSize
+	public func CGVectorFromString(string: String) -> CGVector
+	public func UIEdgeInsetsFromString(string: String) -> UIEdgeInsets
+	public func UIOffsetFromString(string: String) -> UIOffset
+UIApplication.swift
+	public enum UIBackgroundRefreshStatus: Int
+	public let UIBackgroundRefreshStatusRestricted = UIBackgroundRefreshStatus.Restricted
+	public let UIBackgroundRefreshStatusDenied = UIBackgroundRefreshStatus.Denied
+	public let UIBackgroundRefreshStatusAvailable = UIBackgroundRefreshStatus.Available
+	private(set) public var delegate: UIApplicationDelegate?
+	public var applicationSupportsShakeToEdit: Bool
+	public var scheduledLocalNotifications: [UILocalNotification]?
+	public var backgroundTimeRemaining: NSTimeInterval
+	public var backgroundRefreshStatus: UIBackgroundRefreshStatus
+	public var idleTimerDisabled: Bool
+	public static var shortcutItems: [UIApplicationShortcutItem]?
+	public var protectedDataAvailable = false
+	public var statusBarFrame = CGRect.zero
+	public var networkActivityIndicatorVisible: Bool
+	public var applicationIconBadgeNumber: Int
+	public var preferredContentSizeCategory: String
+	public var statusBarOrientationAnimationDuration: NSTimeInterval = 0.0
+	public static func sharedApplication() -> UIApplication
+	public func sendEvent(event: UIEvent)
+	public func sendAction(action: Selector, to target: AnyObject?, from sender: AnyObject?, forEvent event: UIEvent?) -> Bool
+	public func beginIgnoringInteractionEvents()
+	public func endIgnoringInteractionEvents()
+	public func isIgnoringInteractionEvents() -> Bool
+	public func openURL(url: NSURL) -> Bool
+	public func canOpenURL(url: NSURL) -> Bool
+	public func registerUserNotificationSettings(settings: UIUserNotificationSettings)
+	public func currentUserNotificationSettings() -> UIUserNotificationSettings?
+	public func registerForRemoteNotifications()
+	public func unregisterForRemoteNotifications()
+	public func isRegisteredForRemoteNotifications() -> Bool
+	public func scheduleLocalNotification(notification: UILocalNotification)
+	public func presentLocalNotificationNow(notification: UILocalNotification)
+	public func cancelLocalNotification(notification: UILocalNotification)
+	public func cancelAllLocalNotifications()
+	public func setMinimumBackgroundFetchInterval(interval: NSTimeInterval)
+	public func beginBackgroundTaskWithName(name: String?, expirationHandler handler: (() -> Void)?) -> UIBackgroundTaskIdentifier
+	public func beginBackgroundTaskWithExpirationHandler(handler: (() -> Void)?) -> UIBackgroundTaskIdentifier
+	public func endBackgroundtask(identifier: UIBackgroundTaskIdentifier)
+	public func extendStateRestoration()
+	public func completeStateRestoration()
+	public func ignoreSnapshotOnNextApplicationLaunch()
+	public class func registerObjectForStateRestoration(object: NSObject, restorationIdentifier identifier: String)
+	public func beginReceivingRemoteControlEvents()
+	public func endReceivingRemoteControlEvents()
+UIResponder.swift
+	public typealias UIResponder = NSResponder
+UIViewController.swift
+	public enum UIModalPresentationStyle : Int
+	public enum UIModalTransitionStyle : Int
+	@objc public protocol UIViewControllerTransitioningDelegate: NSObjectProtocol
+	@objc public protocol UIViewControllerPreviewingDelegate: NSObjectProtocol
+	public class UIViewController: UIResponder
+UITouch.swift
+	public enum UITouchType : Int
+	public enum UITouchPhase : Int
+	public class UITouch: NSObject
+UIDeviceBatteryState.swift
+	public enum UIDeviceBatteryState: Int
+USKitCore.swift
+	@noreturn public func USUnimplemented(fn: String = __FUNCTION__, file: StaticString = __FILE__, line: UInt = __LINE__)
+	public func USLog(string: String)
+UIViewAutoresizing.swift
+	public struct UIViewAutoresizing : OptionSetType
+USApplication.swift
+	public enum USKitApplicationState: Int
+	public let USKitApplicationStateChangedNotification = "USKitApplicationStateChangedNotification"
+	public final class USApplication: NSObject
+USContainerView.swift
+	public let USContainerViewDidChangeRootViewControllerNotification = "USContainerViewDidChangeRootViewControllerNotification"
+	public class USContainerView: NSView
+UIFont.swift
+	public typealias UIFont = NSFont
+UINavigationItem.swift
+	public class UINavigationItem: NSObject
+UIControlConstants.swift
+	public struct UIControlEvents : OptionSetType
+	public struct UIControlState : OptionSetType
+	public enum UIControlContentVerticalAlignment : Int
+	public enum UIControlContentHorizontalAlignment : Int

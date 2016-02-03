@@ -15,7 +15,6 @@ import Cocoa
     public typealias UILayoutSupport = NSObject
     public typealias UIInterfaceOrientationMask = NSObject
     public typealias UISplitViewController = NSObject
-    public typealias UITraitCollection = NSObject
     public typealias UINavigationController = NSObject
     public typealias UITabBarController = NSObject
     public typealias UIViewControllerPreviewing = NSObject
