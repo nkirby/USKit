@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4308897D1C62A442005A3894 /* UITraitCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308897C1C62A442005A3894 /* UITraitCollection.swift */; };
+		4308897F1C62E5D6005A3894 /* UITraitCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308897E1C62E5D6005A3894 /* UITraitCollection.swift */; };
+		430889831C63AB7B005A3894 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430889821C63AB7B005A3894 /* UINavigationController.swift */; };
+		430889851C63D5FD005A3894 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430889841C63D5FD005A3894 /* UINavigationBar.swift */; };
+		430889881C63DC60005A3894 /* UIBarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430889871C63DC60005A3894 /* UIBarLayout.swift */; };
 		431A753D1C5BC52E009242A3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431A753C1C5BC52E009242A3 /* UIViewController.swift */; };
 		435A47641C4DE1660080EC70 /* UIUserInterfaceLayoutDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A47631C4DE1660080EC70 /* UIUserInterfaceLayoutDirection.swift */; };
 		435A47661C4DE25E0080EC70 /* UIApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A47651C4DE25E0080EC70 /* UIApplicationDelegate.swift */; };
@@ -72,7 +75,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4308897C1C62A442005A3894 /* UITraitCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITraitCollection.swift; path = lib/Device/UITraitCollection.swift; sourceTree = "<group>"; };
+		4308897E1C62E5D6005A3894 /* UITraitCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITraitCollection.swift; path = lib/Layout/UITraitCollection.swift; sourceTree = "<group>"; };
+		430889821C63AB7B005A3894 /* UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UINavigationController.swift; path = "lib/View Controllers/Navigation/UINavigationController.swift"; sourceTree = "<group>"; };
+		430889841C63D5FD005A3894 /* UINavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UINavigationBar.swift; path = lib/Views/UINavigationBar.swift; sourceTree = "<group>"; };
+		430889871C63DC60005A3894 /* UIBarLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIBarLayout.swift; path = lib/Layout/UIBarLayout.swift; sourceTree = "<group>"; };
 		431A753C1C5BC52E009242A3 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = "lib/View Controllers/UIViewController.swift"; sourceTree = "<group>"; };
 		435A47631C4DE1660080EC70 /* UIUserInterfaceLayoutDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIUserInterfaceLayoutDirection.swift; path = lib/Application/UIUserInterfaceLayoutDirection.swift; sourceTree = "<group>"; };
 		435A47651C4DE25E0080EC70 /* UIApplicationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIApplicationDelegate.swift; path = lib/Application/UIApplicationDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +154,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		430889861C63D600005A3894 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				430889841C63D5FD005A3894 /* UINavigationBar.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		431A753E1C5BC53A009242A3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +235,7 @@
 		43C144831C5C2917002C23EA /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				430889821C63AB7B005A3894 /* UINavigationController.swift */,
 				43C144811C5C2912002C23EA /* UINavigationItem.swift */,
 			);
 			name = Navigation;
@@ -229,6 +244,8 @@
 		43D572401C518563006D080C /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				430889871C63DC60005A3894 /* UIBarLayout.swift */,
+				4308897E1C62E5D6005A3894 /* UITraitCollection.swift */,
 				43D5723E1C51855F006D080C /* UIViewAutoresizing.swift */,
 			);
 			name = Layout;
@@ -304,6 +321,7 @@
 				43D572401C518563006D080C /* Layout */,
 				435A476B1C4DF6E00080EC70 /* Screen */,
 				431A753E1C5BC53A009242A3 /* View Controllers */,
+				430889861C63D600005A3894 /* Views */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -317,7 +335,6 @@
 				43EC1FE51C4DA55C00C3BDD6 /* UIDeviceOrientation.swift */,
 				43EC1FC51C4D55F500C3BDD6 /* UIIInterfaceOrientation.swift */,
 				43EC1FC81C4D56C300C3BDD6 /* UIInterfaceIdiom.swift */,
-				4308897C1C62A442005A3894 /* UITraitCollection.swift */,
 			);
 			name = Device;
 			sourceTree = "<group>";
@@ -489,11 +506,11 @@
 			files = (
 				43EC1FF61C4DDFA600C3BDD6 /* UIApplication+State.swift in Sources */,
 				43EC1FC41C4D549A00C3BDD6 /* UIImage.swift in Sources */,
-				4308897D1C62A442005A3894 /* UITraitCollection.swift in Sources */,
 				43EC1FCD1C4D5CED00C3BDD6 /* UIDeviceConstants.swift in Sources */,
 				43C144741C5B0200002C23EA /* UIGestureRecognizer.swift in Sources */,
 				43EC1FE61C4DA55C00C3BDD6 /* UIDeviceOrientation.swift in Sources */,
 				43EC1FCB1C4D5A2F00C3BDD6 /* UIDevice.swift in Sources */,
+				4308897F1C62E5D6005A3894 /* UITraitCollection.swift in Sources */,
 				43C1446C1C5B01E1002C23EA /* UIView+Animation.swift in Sources */,
 				43EC1FE01C4D9EEA00C3BDD6 /* UIRectEdge.swift in Sources */,
 				43C1446D1C5B01E1002C23EA /* UIView+AutoLayout.swift in Sources */,
@@ -514,8 +531,10 @@
 				43C1447E1C5B1201002C23EA /* USKit.swift in Sources */,
 				43C1446A1C5B01E1002C23EA /* UIControl.swift in Sources */,
 				43EC1FE41C4DA3EF00C3BDD6 /* UIFloatRange.swift in Sources */,
+				430889851C63D5FD005A3894 /* UINavigationBar.swift in Sources */,
 				43EC1FC91C4D56C300C3BDD6 /* UIInterfaceIdiom.swift in Sources */,
 				43EC1FD41C4D6C3500C3BDD6 /* UIEdgeInsets.swift in Sources */,
+				430889881C63DC60005A3894 /* UIBarLayout.swift in Sources */,
 				43EC1FD91C4D6EE500C3BDD6 /* NSString+StringConversions.swift in Sources */,
 				435A476A1C4DF6DC0080EC70 /* UIScreen.swift in Sources */,
 				43EC1FF71C4DE11300C3BDD6 /* UIApplication.swift in Sources */,
@@ -531,6 +550,7 @@
 				43917A471C50532F00940D5D /* USContainerView.swift in Sources */,
 				43C144711C5B01E1002C23EA /* UIView.swift in Sources */,
 				43EC1FDE1C4D9D5000C3BDD6 /* NSIndexPath+UIKit.swift in Sources */,
+				430889831C63AB7B005A3894 /* UINavigationController.swift in Sources */,
 				43EC1FD11C4D623700C3BDD6 /* UIFont.swift in Sources */,
 				43C144701C5B01E1002C23EA /* UIView+Subviews.swift in Sources */,
 				43C144821C5C2912002C23EA /* UINavigationItem.swift in Sources */,

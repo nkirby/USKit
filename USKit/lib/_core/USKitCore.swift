@@ -29,3 +29,13 @@ extension CGRect {
         return CGRect(x: point.x - (self.width / 2), y: point.y - (self.height / 2), width: point.x + (self.width / 2), height: point.y + (self.width / 2)).integral
     }
 }
+
+extension Array {
+    internal func get(index: Int) -> Element? {
+        if index >= 0 && index < self.count {
+            return self[index]
+        }
+        
+        return nil
+    }
+}
