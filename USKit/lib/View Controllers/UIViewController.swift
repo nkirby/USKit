@@ -65,6 +65,7 @@ public class UIViewController: UIResponder {
     public var view: UIView! {
         if !self.isViewLoaded() {
             self.loadView()
+            self.viewDidLoad()
         }
         
         return self._view!
@@ -194,7 +195,6 @@ public class UIViewController: UIResponder {
         precondition(!self.isViewLoaded(), "USKit: Do not invoke loadView() yourself.")
         
         self._view = UIView(frame: CGRect.zero)
-        self.viewDidLoad()
     }
     
     public func viewDidLoad() {

@@ -46,6 +46,11 @@ public class UINavigationBar: UIView {
     public var translucent = true
     public var titleTextAttributes: [String : AnyObject]?
     
+    public override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        self.backgroundColor = UIColor.blackColor()
+    }
+    
 // =======================================================
 // MARK: - Stack
     

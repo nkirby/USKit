@@ -83,7 +83,55 @@ public class UINavigationController: UIViewController {
     public override func loadView() {
         super.loadView()
         
+        USLog("loadView: UINVC")
         self.navigationBar = UINavigationBar()
+        self.view.backgroundColor = UIColor.blueColor()
+        
+        self.view.addSubview(self.navigationBar)
+    }
+    
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        for vc in self.viewControllers {
+            vc.view.frame = self.view.bounds
+            vc.view.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+            self.view.addSubview(vc.view)
+        }
+        
+        self.view.bringSubviewToFront(self.navigationBar)
+        self.navigationBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 36.0)
+        self.navigationBar.autoresizingMask = [.FlexibleWidth]
+    }
+    
+    public override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.visibleViewController?.viewWillAppear(animated)
+    }
+    
+    public override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.visibleViewController?.viewDidAppear(animated)
+    }
+    
+    public override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.visibleViewController?.viewWillDisappear(animated)
+    }
+    
+    public override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.visibleViewController?.viewDidDisappear(animated)
+    }
+    
+    public override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        self.visibleViewController?.viewWillLayoutSubviews()
+    }
+    
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.visibleViewController?.viewDidLayoutSubviews()
     }
     
 // =======================================================

@@ -54,7 +54,9 @@ class ViewController: NSViewController {
         self.view.addSubview(self.containerView)
 
         let rootViewController = USKRootViewController(nibName: nil, bundle: nil)
-        self.containerView.presentRootViewController(rootViewController, animated: true, completion: nil)
+//        let navController = UINavigationController(nibName: nil, bundle: nil)
+        let navController = UINavigationController(rootViewController: rootViewController)
+        self.containerView.presentRootViewController(navController, animated: true, completion: nil)
         
 //        let testView = TestView(frame: self.containerView.bounds)
 //        testView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]

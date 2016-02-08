@@ -37,12 +37,34 @@ extension UIView {
         }
     }
     
+    private func resetBackingViewSubviews() {
+        self.backingView.subviews = self.subviews.map { $0.backingView }
+    }
+    
     public func bringSubviewToFront(subview: UIView) {
-        USUnimplemented()
+        guard let idx = self.subviews.indexOf(subview) else {
+            return
+        }
+        
+        var subviews = self.subviews
+        subviews.removeAtIndex(idx)
+        subviews.append(subview)
+        
+        self.subviews = subviews
+        self.resetBackingViewSubviews()
     }
     
     public func sendSubviewToBack(subview: UIView) {
-        USUnimplemented()
+        guard let idx = self.subviews.indexOf(subview) else {
+            return
+        }
+        
+        var subviews = self.subviews
+        subviews.removeAtIndex(idx)
+        subviews.insert(subview, atIndex: 0)
+        
+        self.subviews = subviews
+        self.resetBackingViewSubviews()
     }
     
     public func removeFromSuperview() {
